@@ -22,13 +22,22 @@ In order to use the template you have to:
 2. Define a model class that inherits from BaseModel.
 3. Define a trainer class that inherits.
 4. Define a configuration file with the parameters needed in an experiment.
-5. Run the model using: python main.py -c [path to configuration file]
+5. Run the model using:
+```shell
+python main.py -c [path to configuration file]
+```
 
 # Running The Demo Project
 A simple model for the mnist dataset is available to test the template.
 To run the demo project:
-1. Start the training using: python main.py -c configs/simple_mnist_config.json
-2. Start Tensorboard visualization using: tensorboard --logdir=experiments/simple_mnist/logs
+1. Start the training using:
+```shell
+python main.py -c configs/simple_mnist_config.json
+```
+2. Start Tensorboard visualization using:
+```shell
+tensorboard --logdir=experiments/simple_mnist/logs
+```
 
 <div align="center">
 
