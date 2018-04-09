@@ -32,7 +32,7 @@ To run the demo project:
 
 <div align="center">
 
-<img align="center" height="600" width="600" src="https://github.com/Ahmkel/Keras-Project-Templete/blob/master/figures/Tensorboard_demo.PNG?raw=true">
+<img align="center" height="600" width="600" src="https://github.com/Ahmkel/Keras-Project-Template/blob/master/figures/Tensorboard_demo.PNG?raw=true">
 
 </div>
 
@@ -43,7 +43,7 @@ To run the demo project:
 
 <div align="center">
 
-<img align="center" height="600" width="600" src="https://github.com/Ahmkel/Keras-Project-Templete/blob/master/figures/ProjectArchitecture.jpg?raw=true">
+<img align="center" height="600" width="600" src="https://github.com/Ahmkel/Keras-Project-Template/blob/master/figures/ProjectArchitecture.jpg?raw=true">
 
 </div>
 
