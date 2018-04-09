@@ -48,7 +48,7 @@ tensorboard --logdir=experiments/simple_mnist/logs
 
 # Template Details
 
-##Project Architecture
+## Project Architecture
 
 <div align="center">
 
