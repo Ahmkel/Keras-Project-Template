@@ -1,4 +1,4 @@
-# Keras Project Template
+﻿# Keras Project Template
 A project template to simplify building and training deep learning models using Keras.
 
 # Table of contents
@@ -60,10 +60,10 @@ tensorboard --logdir=experiments/simple_mnist/logs
 ## Folder Structure
 
 ```
-├──  main.py             - here's an example of main that is responsible for the whole pipeline.
+├── main.py             - here's an example of main that is responsible for the whole pipeline.
 │
 │
-├──  base               - this folder contains the abstract classes of the project components
+├── base                - this folder contains the abstract classes of the project components
 │   ├── base_data_loader.py   - this file contains the abstract class of the data loader.
 │   ├── base_model.py   - this file contains the abstract class of the model.
 │   └── base_train.py   - this file contains the abstract class of the trainer.
@@ -77,15 +77,15 @@ tensorboard --logdir=experiments/simple_mnist/logs
 │   └── simple_mnist_trainer.py
 │
 |
-├──  data_loader        - this folder contains the data loaders of your project.
-│    └── simple_mnist_data_loader.py
+├── data_loader         - this folder contains the data loaders of your project.
+│   └── simple_mnist_data_loader.py
 │
 │
-│──  configs            - this folder contains the experiment and model configs of your project.
-│    └── simple_mnist_config.json
+├── configs             - this folder contains the experiment and model configs of your project.
+│   └── simple_mnist_config.json
 │
 │
-│-- datasets            - this folder might contain the datasets of your project.
+├── datasets            - this folder might contain the datasets of your project.
 │
 │
 └── utils               - this folder contains any utils you need.
@@ -146,7 +146,7 @@ Create a command line tool for Keras project scaffolding where the user defines 
 # Contributing
 Any contributions are welcome including improving the template and example projects.
 
-# Acknowledgments
+# Acknowledgements
 This project template is based on [MrGemy95](https://github.com/MrGemy95)'s [Tensorflow Project Template](https://github.com/MrGemy95/Tensorflow-Project-Template)
 
 
