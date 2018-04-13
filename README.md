@@ -1,10 +1,12 @@
-﻿# Keras Project Template
+﻿# Keras Project Template [![CometML](https://img.shields.io/badge/comet.ml-track-brightgreen.svg)](https://www.comet.ml)
+
 A project template to simplify building and training deep learning models using Keras.
 
 # Table of contents
 
 - [Getting Started](#getting-started)
 - [Running The Demo Project](#running-the-demo-project)
+- [Comet.ml Integration](#cometml-integration)
 - [Template Details](#template-details)
     - [Project Architecture](#project-architecture)
     - [Folder Structure](#folder-structure)
@@ -44,6 +46,23 @@ tensorboard --logdir=experiments/simple_mnist/logs
 <img align="center" width="600" src="https://github.com/Ahmkel/Keras-Project-Template/blob/master/figures/Tensorboard_demo.PNG?raw=true">
 
 </div>
+
+# Comet.ml Integration
+This template also supports reporting to Comet.ml which allows you to see all your hyper-params, metrics, graphs, dependencies and more including real-time metric. 
+
+Add your API key [in the configuration file](configs/simple_mnist_config.json#L15):
+
+
+For example:  `"comet_api_key": "your key here"` 
+
+Here's how it looks after you start training:
+<div align="center">
+
+<img align="center" width="800" src="https://comet-ml.nyc3.digitaloceanspaces.com/CometDemo.gif">
+
+</div>
+
+You can also link your Github repository to your comet.ml project for full version control. 
 
 
 # Template Details
