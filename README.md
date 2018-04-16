@@ -10,7 +10,7 @@ A project template to simplify building and training deep learning models using 
     - [Folder Structure](#folder-structure)
     - [Main Components](#main-components)
 - [Future Work](#future-work)
-- [Other Examples](#more-advanced-example)
+- [Example Projects](#example-projects)
 - [Contributing](#contributing)
 - [Acknowledgements](#acknowledgements)
 
