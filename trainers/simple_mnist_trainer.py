@@ -32,8 +32,7 @@ class SimpleMnistModelTrainer(BaseTrain):
             experiment.log_multiple_params(self.config)
             self.callbacks.append(experiment.get_keras_callback())
 
-        else:
-            self.callbacks.append(
+        self.callbacks.append(
                 TensorBoard(
                     log_dir=self.config.tensorboard_log_dir,
                     write_graph=self.config.tensorboard_write_graph,
