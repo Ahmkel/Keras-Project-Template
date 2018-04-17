@@ -25,19 +25,19 @@ class SimpleMnistModelTrainer(BaseTrain):
             )
         )
 
-        if hasattr(self.config,"comet_api_key"):
-            from comet_ml import Experiment
-            experiment = Experiment(api_key=self.config.comet_api_key, project_name=self.config.exp_name)
-            experiment.disable_mp()
-            experiment.log_multiple_params(self.config)
-            self.callbacks.append(experiment.get_keras_callback())
-
         self.callbacks.append(
                 TensorBoard(
                     log_dir=self.config.tensorboard_log_dir,
                     write_graph=self.config.tensorboard_write_graph,
                 )
             )
+
+        if hasattr(self.config,"comet_api_key"):
+            from comet_ml import Experiment
+            experiment = Experiment(api_key=self.config.comet_api_key, project_name=self.config.exp_name)
+            experiment.disable_mp()
+            experiment.log_multiple_params(self.config)
+            self.callbacks.append(experiment.get_keras_callback())
 
     def train(self):
         history = self.model.fit(
