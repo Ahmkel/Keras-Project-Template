@@ -1,6 +1,6 @@
 from base.base_trainer import BaseTrain
 import os
-from tensorflow.python.keras.callbacks import ModelCheckpoint, TensorBoard
+from keras.callbacks import ModelCheckpoint, TensorBoard
 
 
 class SimpleMnistModelTrainer(BaseTrain):

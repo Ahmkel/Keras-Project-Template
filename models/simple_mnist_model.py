@@ -1,6 +1,6 @@
 from base.base_model import BaseModel
-from tensorflow.python.keras.models import Sequential
-from tensorflow.python.keras.layers import Input, Dense
+from keras.models import Sequential
+from keras.layers import Input, Dense
 
 
 class SimpleMnistModel(BaseModel):
@@ -10,9 +10,9 @@ class SimpleMnistModel(BaseModel):
 
     def build_model(self):
         self.model = Sequential()
-        self.model.add(Dense(32, 'relu', input_shape=(28 * 28,)))
-        self.model.add(Dense(16, 'relu'))
-        self.model.add(Dense(10, 'softmax'))
+        self.model.add(Dense(32, activation='relu', input_shape=(28 * 28,)))
+        self.model.add(Dense(16, activation='relu'))
+        self.model.add(Dense(10, activation='softmax'))
 
         self.model.compile(
             loss='sparse_categorical_crossentropy',
