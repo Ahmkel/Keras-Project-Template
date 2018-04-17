@@ -1,5 +1,5 @@
 from base.base_data_loader import BaseDataLoader
-from tensorflow.python.keras.datasets import mnist
+from keras.datasets import mnist
 
 
 class SimpleMnistDataLoader(BaseDataLoader):
@@ -12,5 +12,5 @@ class SimpleMnistDataLoader(BaseDataLoader):
     def get_train_data(self):
         return self.X_train, self.y_train
 
-    def get_test_date(self):
+    def get_test_data(self):
         return self.X_test, self.y_test

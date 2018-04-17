@@ -1,4 +1,4 @@
-class BaseModel:
+class BaseModel(object):
     def __init__(self, config):
         self.config = config
         self.model = None
