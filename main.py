@@ -5,7 +5,6 @@ from utils.config import process_config
 from utils.dirs import create_dirs
 from utils.utils import get_args
 
-
 def main():
     # capture the config path from the run arguments
     # then process the json configuration file
@@ -17,7 +16,7 @@ def main():
         exit(0)
 
     # create the experiments dirs
-    create_dirs([config.tensorboard_log_dir, config.checkpoint_dir])
+    create_dirs([config.callbacks.tensorboard_log_dir, config.callbacks.checkpoint_dir])
 
     print('Create the data generator.')
     data_loader = SimpleMnistDataLoader(config)

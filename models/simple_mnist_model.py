@@ -16,6 +16,6 @@ class SimpleMnistModel(BaseModel):
 
         self.model.compile(
             loss='sparse_categorical_crossentropy',
-            optimizer=self.config.optimizer,
+            optimizer=self.config.model.optimizer,
             metrics=['acc'],
         )
