@@ -20,5 +20,5 @@
     "checkpoint_verbose": true,
     "tensorboard_write_graph": true
   }
-
 }
+
