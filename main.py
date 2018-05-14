@@ -1,36 +1,34 @@
-from data_loader.simple_mnist_data_loader import SimpleMnistDataLoader
-from models.simple_mnist_model import SimpleMnistModel
-from trainers.simple_mnist_trainer import SimpleMnistModelTrainer
 from utils.config import process_config
 from utils.dirs import create_dirs
-from utils.utils import get_args
-
+from utils.args import get_args
+from utils import factory
+import sys
 
 def main():
     # capture the config path from the run arguments
-    # then process the json configuration file
+    # then process the json configuration fill
     try:
         args = get_args()
         config = process_config(args.config)
-    except:
-        print("missing or invalid arguments")
-        exit(0)
 
-    # create the experiments dirs
-    create_dirs([config.tensorboard_log_dir, config.checkpoint_dir])
+        # create the experiments dirs
+        create_dirs([config.callbacks.tensorboard_log_dir, config.callbacks.checkpoint_dir])
 
-    print('Create the data generator.')
-    data_loader = SimpleMnistDataLoader(config)
+        print('Create the data generator.')
+        data_loader = factory.create("data_loader."+config.data_loader.name)(config)
 
-    print('Create the model.')
-    model = SimpleMnistModel(config)
+        print('Create the model.')
+        model = factory.create("models."+config.model.name)(config)
 
-    print('Create the trainer')
-    trainer = SimpleMnistModelTrainer(model.model, data_loader.get_train_data(), config)
+        print('Create the trainer')
+        trainer = factory.create("trainers."+config.trainer.name)(model.model, data_loader.get_train_data(), config)
 
-    print('Start training the model.')
-    trainer.train()
+        print('Start training the model.')
+        trainer.train()
 
+    except Exception as e:
+        print(e)
+        sys.exit(1)
 
 if __name__ == '__main__':
     main()
