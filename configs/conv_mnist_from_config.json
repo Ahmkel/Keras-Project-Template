@@ -1,12 +1,17 @@
 {
   "exp": {
-    "name": "simple_mnist"
+    "name": "conv_mnist_from_config"
+  },
+  "data_loader": {
+    "name": "conv_mnist_data_loader.ConvMnistDataLoader"
   },
   "model":{
+    "name": "conv_mnist_model.ConvMnistModel",
     "learning_rate": 0.001,
-    "optimizer": "adam"
+    "optimizer": "adadelta"
   },
   "trainer":{
+    "name": "simple_mnist_trainer.SimpleMnistModelTrainer",
     "num_epochs": 20,
     "batch_size": 64,
     "validation_split":0.25,

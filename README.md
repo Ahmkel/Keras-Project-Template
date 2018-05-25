@@ -48,12 +48,12 @@ tensorboard --logdir=experiments/simple_mnist/logs
 </div>
 
 # Comet.ml Integration
-This template also supports reporting to Comet.ml which allows you to see all your hyper-params, metrics, graphs, dependencies and more including real-time metric. 
+This template also supports reporting to Comet.ml which allows you to see all your hyper-params, metrics, graphs, dependencies and more including real-time metric.
 
 Add your API key [in the configuration file](configs/simple_mnist_config.json#L15):
 
 
-For example:  `"comet_api_key": "your key here"` 
+For example:  `"comet_api_key": "your key here"`
 
 Here's how it looks after you start training:
 <div align="center">
@@ -62,7 +62,7 @@ Here's how it looks after you start training:
 
 </div>
 
-You can also link your Github repository to your comet.ml project for full version control. 
+You can also link your Github repository to your comet.ml project for full version control.
 
 
 # Template Details
@@ -154,12 +154,24 @@ Responsible for building the pipeline.
 4. Create an instance of your trainer class.
 5. Train your model using ".Train()" function on the trainer object.
 
+### From Config
+We can now load models without having to explicitly create an instance of each class. Look at:
+1. from_config.py: this can load any config file set up to point to the right modules/classes to import
+2. Look at configs/simple_mnist_from_config.json to get an idea of how this works from the config. Run it with:
+```shell
+python from_config.py -c configs/simple_mnist_from_config.json
+```
+3. See conv_mnist_from_config.json (and the additional data_loader/model) to see how easy it is to run a different experiment with just a different config file:
+```shell
+python from_config.py -c configs/conv_mnist_from_config.json
+```
+
 # Example Projects
 * [Toxic comments classification using Convolutional Neural Networks and Word Embedding](https://github.com/Ahmkel/Toxic-Comments-Competition-Kaggle)
 
 
 # Future Work
-Create a command line tool for Keras project scaffolding where the user defines a data loader, a model, a trainer and runs the tool to generate the whole project.
+Create a command line tool for Keras project scaffolding where the user defines a data loader, a model, a trainer and runs the tool to generate the whole project. (This is somewhat complete now by loading each of these from the config)
 
 
 # Contributing

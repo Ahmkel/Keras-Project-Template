@@ -30,6 +30,7 @@ class SimpleMnistModelTrainer(BaseTrain):
                 log_dir=self.config.callbacks.tensorboard_log_dir,
                 write_graph=self.config.callbacks.tensorboard_write_graph,
             )
+        )
 
         if hasattr(self.config,"comet_api_key"):
             from comet_ml import Experiment
