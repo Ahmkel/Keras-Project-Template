@@ -38,7 +38,7 @@ python main.py -c configs/simple_mnist_config.json
 ```
 2. Start Tensorboard visualization using:
 ```shell
-tensorboard --logdir=experiments/simple_mnist/logs
+tensorboard --logdir=experiments/%Y-%m-%d/simple_mnist/logs
 ```
 
 <div align="center">
