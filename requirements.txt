@@ -1,0 +1,8 @@
+keras
+pandas
+sklearn
+pydub
+BeautifulSoup4
+librosa
+dotmap
+comet-ml

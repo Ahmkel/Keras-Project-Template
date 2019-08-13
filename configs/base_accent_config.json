@@ -1,0 +1,41 @@
+{
+  "exp": {
+    "name": "base_accent_from_config"
+  },
+  "data_loader": {
+    "name": "base_accent_data_loader.BaseAccentDataLoader"
+  },
+  "model":{
+    "name": "base_accent_model.BaseAccentModel",
+    "learning_rate": 0.001,
+    "optimizer": "adadelta",
+    "input_shape": ""
+
+  },
+  "trainer":{
+    "name": "base_accent_trainer.BaseAccentTrainer",
+    "num_epochs": 20,
+    "batch_size": 64,
+    "validation_split":0.25,
+    "verbose_training": true
+  },
+  "callbacks":{
+    "checkpoint_monitor": "val_loss",
+    "checkpoint_mode": "min",
+    "checkpoint_save_best_only": true,
+    "checkpoint_save_weights_only": true,
+    "checkpoint_verbose": true,
+    "tensorboard_write_graph": true
+  },
+  "api": {
+    "comet": {
+      "api_key": "BrsiReJnVrJjMuJAnLxd0x2n0",
+      "exp_name": "accent-training"
+    },
+    "telegram": {
+      "token": "839888724:AAG59E81mmbvJy_Jy8je1DyusR14yU8U43E",
+      "user_id": ""
+    }
+  },
+  "debug": "true"
+}
