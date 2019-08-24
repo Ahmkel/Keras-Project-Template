@@ -2,6 +2,7 @@ from base.base_model import BaseModel
 from keras.models import Sequential
 from keras.layers import Input, Dense, Conv2D, MaxPooling2D, Dropout, Flatten
 
+
 class ConvMnistModel(BaseModel):
     def __init__(self, config):
         super(ConvMnistModel, self).__init__(config)

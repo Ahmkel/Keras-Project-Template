@@ -9,13 +9,13 @@
     "name": "base_accent_model.BaseAccentModel",
     "learning_rate": 0.001,
     "optimizer": "adadelta",
-    "input_shape": "",
-    "num_classes": ""
+    "input_shape": [30, 13, 1],
+    "num_classes": 3
   },
   "trainer":{
     "name": "base_accent_trainer.BaseAccentTrainer",
     "num_epochs": 20,
-    "batch_size": 64,
+    "batch_size": 4,
     "validation_split":0.25,
     "verbose_training": true
   },

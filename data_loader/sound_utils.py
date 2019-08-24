@@ -2,7 +2,6 @@ import librosa
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler
 
-DEBUG = True
 SILENCE_THRESHOLD = .01
 RATE = 24000
 N_MFCC = 13
@@ -31,6 +30,16 @@ def to_mfcc(wav):
     mfcc = librosa.feature.mfcc(y=wav, sr=RATE, n_mfcc=N_MFCC)
     # print("finished")
     return mfcc
+
+
+def process_sound_file(name):
+    """
+    process a sound file - reading a wav and converting it to mfcc
+    :param file_name:
+    :return:
+    """
+    return to_mfcc(get_wav(name))
+
 
 class SoundUtils:
 

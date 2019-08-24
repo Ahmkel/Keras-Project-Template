@@ -48,6 +48,17 @@ def to_categorical(y):
     return utils.to_categorical(y, len(lang_dict))
 
 
+def find_classes(y):
+    lang_dict = {}
+    for index, language in enumerate(set(y)):
+        lang_dict[language] = index
+
+    return lang_dict
+
+
+def create_labels(y, classes):
+    pass
+
 # if __name__ == '__main__':
 #     '''
 #     Console command example:

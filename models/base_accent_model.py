@@ -1,7 +1,12 @@
+import librosa
+
 from base.base_model import BaseModel
 from keras.models import Sequential
 from keras.layers import Dense, Conv2D, MaxPooling2D, Dropout, Flatten
 
+from kapre.time_frequency import Melspectrogram
+RATE = 24000
+SR = 22050
 
 class BaseAccentModel(BaseModel):
 

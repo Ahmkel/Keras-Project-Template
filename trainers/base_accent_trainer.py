@@ -62,14 +62,14 @@ class BaseAccentTrainer(BaseTrain):
         #                  write_images=True, embeddings_freq=0, embeddings_layer_names=None,
         #                  embeddings_metadata=None)
 
-        # log experiments to comet.ml
-        if hasattr(self.config.api, "comet"):
-            from comet_ml import Experiment
-            experiment = Experiment(api_key=self.config.api.comet.api_key,
-                                    project_name=self.config.api.comet.exp_name)
-            experiment.disable_mp()
-            experiment.log_parameters(self.config)
-            self.callbacks.append(experiment.get_callback('keras'))
+        # # log experiments to comet.ml
+        # if hasattr(self.config.api, "comet"):
+        #     from comet_ml import Experiment
+        #     experiment = Experiment(api_key=self.config.api.comet.api_key,
+        #                             project_name=self.config.api.comet.exp_name)
+        #     experiment.disable_mp()
+        #     experiment.log_parameters(self.config)
+        #     self.callbacks.append(experiment.get_callback('keras'))
 
     def train(self):
 
@@ -86,8 +86,10 @@ class BaseAccentTrainer(BaseTrain):
 
         # using a generator to load the data
         history = self.model.fit_generator(
-            datagen.flow(self.training_data[0], self.training_data[1],
-                         batch_size=self.config.trainer.batch_size),
+            # datagen.flow(self.training_data[0], self.training_data[1],
+            #              batch_size=self.config.trainer.batch_size),
+            # self.training_data,
+            batch_size=self.config.trainer.batch_size,
             epochs=self.config.trainer.num_epochs,
             steps_per_epoch=steps_per_epoch,
             verbose=self.config.trainer.verbose_training,
