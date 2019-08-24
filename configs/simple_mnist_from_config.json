@@ -24,5 +24,7 @@
    "checkpoint_save_weights_only": true,
     "checkpoint_verbose": true,
     "tensorboard_write_graph": true
-  }
+  },
+  "comet_api_key": "BrsiReJnVrJjMuJAnLxd0x2n0",
+  "exp_name": "accent-training"
 }
