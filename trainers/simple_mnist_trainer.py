@@ -34,7 +34,8 @@ class SimpleMnistModelTrainer(BaseTrain):
 
         if hasattr(self.config, "comet_api_key"):
             from comet_ml import Experiment
-            experiment = Experiment(api_key=self.config.comet_api_key, project_name=self.config.exp_name)
+            experiment = Experiment(api_key=self.config.comet_api_key,
+                                    project_name=self.config.exp_name)
             experiment.disable_mp()
             experiment.log_parameters(self.config)
             self.callbacks.append(experiment.get_keras_callback())

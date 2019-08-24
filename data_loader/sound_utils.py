@@ -35,7 +35,6 @@ def to_mfcc(wav):
 class SoundUtils:
 
 
-
     @staticmethod
     def remove_silence(wav, thresh=0.04, chunk=5000):
         '''

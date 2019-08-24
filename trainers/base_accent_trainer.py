@@ -6,8 +6,15 @@ from keras.callbacks import ModelCheckpoint, TensorBoard, EarlyStopping
 
 
 class BaseAccentTrainer(BaseTrain):
-    def __init__(self, model, data, config):
-        super(BaseAccentTrainer, self).__init__(model, data, config)
+
+    def __init__(self, model,
+                 training_data,
+                 validation_data,
+                 config):
+        super(BaseAccentTrainer, self).__init__(model,
+                                                training_data,
+                                                validation_data,
+                                                config)
         self.callbacks = []
         self.loss = []
         self.acc = []
@@ -39,16 +46,16 @@ class BaseAccentTrainer(BaseTrain):
             )
         )
 
-        if hasattr(self.config.api, "telegram"):
-            from bot.dl_bot import DLBot
-            from bot.telegram_bot_callback import TelegramBotCallback
-
-            # Create a DLBot instance
-            user_id = None if not self.config.api.telegram.user_id else self.config.api.telegram.user_id
-            bot = DLBot(token=self.config.api.telegram.token,
-                        user_id=user_id)
-            # Create a TelegramBotCallback instance
-            self.callbacks.append(TelegramBotCallback(bot))
+        # if hasattr(self.config.api, "telegram"):
+        #     from bot.dl_bot import DLBot
+        #     from bot.telegram_bot_callback import TelegramBotCallback
+        #
+        #     # Create a DLBot instance
+        #     user_id = None if not self.config.api.telegram.user_id else self.config.api.telegram.user_id
+        #     bot = DLBot(token=self.config.api.telegram.token,
+        #                 user_id=user_id)
+        #     # Create a TelegramBotCallback instance
+        #     self.callbacks.append(TelegramBotCallback(bot))
         #
         # # # Creates log file for graphical interpretation using TensorBoard
         # tb = TensorBoard(log_dir='../logs', histogram_freq=0, batch_size=32, write_graph=True, write_grads=True,
@@ -71,29 +78,24 @@ class BaseAccentTrainer(BaseTrain):
         datagen = ImageDataGenerator(width_shift_range=0.05)
 
         # steps per epoch is the number of rounds the generator goes within one epoch
-        steps_per_epoch = len(self.data[0]) / self.config.trainer.batch_size
+        steps_per_epoch = len(self.training_data[0]) / self.config.trainer.batch_size
+
+        # fit_generator(generator, steps_per_epoch=None, epochs=1, verbose=1, callbacks=None, validation_data=None,
+        #               validation_steps=None, validation_freq=1, class_weight=None, max_queue_size=10, workers=1,
+        #               use_multiprocessing=False, shuffle=True, initial_epoch=0)
 
         # using a generator to load the data
         history = self.model.fit_generator(
-            datagen.flow(self.data[0], self.data[1],
+            datagen.flow(self.training_data[0], self.training_data[1],
                          batch_size=self.config.trainer.batch_size),
-            self.data[0], self.data[1],
             epochs=self.config.trainer.num_epochs,
             steps_per_epoch=steps_per_epoch,
             verbose=self.config.trainer.verbose_training,
-            validation_split=self.config.trainer.validation_split,
+            validation_data=(self.validation_data[0], self.validation_data[1]),
             callbacks=self.callbacks,
         )
-        #
-        # self.loss.extend(history.history['loss'])
-        # self.acc.extend(history.history['acc'])
-        # self.val_loss.extend(history.history['val_loss'])
-        # self.val_acc.extend(history.history['val_acc'])
 
-        # # Fit model using ImageDataGenerator
-        # self.model.fit_generator(datagen.flow(self.data[0], y_train, batch_size=batch_size),
-        #                          steps_per_epoch=len(X_train) / 32
-        #                          , epochs=EPOCHS,
-        #                          callbacks=[es, tb, bot], validation_data=(X_validation, y_validation))
-
-
+        self.loss.extend(history.history['loss'])
+        self.acc.extend(history.history['acc'])
+        self.val_loss.extend(history.history['val_loss'])
+        self.val_acc.extend(history.history['val_acc'])
