@@ -4,14 +4,11 @@ from base.base_model import BaseModel
 from keras.models import Sequential
 from keras.layers import Dense, Conv2D, MaxPooling2D, Dropout, Flatten
 
-from kapre.time_frequency import Melspectrogram
-RATE = 24000
-SR = 22050
 
-class BaseAccentModel(BaseModel):
+class AccentModel(BaseModel):
 
     def __init__(self, config):
-        super(BaseAccentModel, self).__init__(config)
+        super(AccentModel, self).__init__(config)
         self.build_model()
 
     def build_model(self):

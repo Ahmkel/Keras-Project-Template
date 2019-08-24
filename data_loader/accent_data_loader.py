@@ -1,4 +1,5 @@
 import multiprocessing
+from collections import defaultdict
 
 import numpy as np
 import pandas as pd
@@ -7,17 +8,17 @@ from joblib import Parallel, delayed
 from base.base_data_loader import BaseDataLoader
 
 from data_loader.csv_parser import split_people, to_categorical, filter_df
-from data_loader.sound_data_generator import DataGenerator
 from data_loader.sound_utils import SoundUtils, process_sound_file
+from tqdm import tqdm
 
 
-class InMemoryAccentDataLoader(BaseDataLoader):
+class AccentDataLoader(BaseDataLoader):
 
     def __init__(self, config):
-        super(InMemoryAccentDataLoader, self).__init__(config)
+        super(AccentDataLoader, self).__init__(config)
 
         # Load metadata
-        df = pd.read_csv("data_loader/bio_data_small.csv")
+        df = pd.read_csv("data_loader/bio_data.csv")
         # Filter metadata to retrieve only files desired
         filtered_df = filter_df(df)
 
@@ -32,10 +33,10 @@ class InMemoryAccentDataLoader(BaseDataLoader):
             print('Loading wav files....')
 
         X_train = Parallel(n_jobs=multiprocessing.cpu_count(), backend='multiprocessing')(
-                           delayed(process_sound_file)(name=name) for name in X_train)
+                           delayed(process_sound_file)(name=name) for name in tqdm(X_train))
 
         X_test = Parallel(n_jobs=multiprocessing.cpu_count(), backend='multiprocessing')(
-                           delayed(process_sound_file)(name=name) for name in X_test)
+                           delayed(process_sound_file)(name=name) for name in tqdm(X_test))
 
         # Create segments from MFCCs
         X_train, y_train = SoundUtils.make_segments(X_train, y_train)

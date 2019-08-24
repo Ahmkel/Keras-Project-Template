@@ -3,17 +3,17 @@
     "name": "base_accent_from_config"
   },
   "data_loader": {
-    "name": "in_memory_accent_data_loader.InMemoryAccentDataLoader"
+    "name": "accent_data_loader.AccentDataLoader"
   },
   "model":{
-    "name": "base_accent_model.BaseAccentModel",
+    "name": "accent_model.AccentModel",
     "learning_rate": 0.001,
     "optimizer": "adadelta",
     "input_shape": [13, 30, 1],
-    "num_classes": 3
+    "num_classes": 4
   },
   "trainer":{
-    "name": "in_memory_accent_trainer.InMemoryAccentTrainer",
+    "name": "accent_trainer.AccentTrainer",
     "num_epochs": 20,
     "batch_size": 4,
     "validation_split":0.25,

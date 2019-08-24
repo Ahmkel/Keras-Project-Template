@@ -5,13 +5,13 @@ import os
 from keras.callbacks import ModelCheckpoint, TensorBoard, EarlyStopping
 
 
-class BaseAccentTrainer(BaseTrain):
+class AccentTrainer(BaseTrain):
 
     def __init__(self, model,
                  training_data,
                  validation_data,
                  config):
-        super(BaseAccentTrainer, self).__init__(model,
+        super(AccentTrainer, self).__init__(model,
                                                 training_data,
                                                 validation_data,
                                                 config)

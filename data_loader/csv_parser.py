@@ -41,9 +41,13 @@ def to_categorical(y):
     :param y (list): list of languages
     :return (numpy array): binary class matrix
     '''
-    lang_dict = {}
-    for index, language in enumerate(set(y)):
-        lang_dict[language] = index
+    # lang_dict = {}
+    lang_dict = {"english": 0,
+                 "arabic": 1,
+                 "mandarin": 2,
+                 "russian": 3}
+    # for index, language in enumerate(set(y)):
+    #     lang_dict[language] = index
     y = list(map(lambda x: lang_dict[x], y))
     return utils.to_categorical(y, len(lang_dict))
 
