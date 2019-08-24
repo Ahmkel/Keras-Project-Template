@@ -2,3 +2,6 @@ href,language_num,sex,birth_place,native_language,other_languages,age_sex,age_of
 http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2837,mandarin32,female,"['hubei,', 'china']",mandarin,['none'],"['21,', 'female', '']",2.0,academic,['usa'],5.0,21
 http://accent.gmu.edu/browse_language.php?function=detail&speakerid=77,english2,female,"['birmingham,', 'uk']",english,"['german', 'mandarin', '']","['30,', 'female', '']",0.0,naturalistic,['uk'],30.0,30
 http://accent.gmu.edu/browse_language.php?function=detail&speakerid=11,arabic1,female,"['saudi', 'arabia']",arabic,['none'],"['38,', 'female', '']",12.0,academic,['usa'],4.0,38
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2837,mandarin32,female,"['hubei,', 'china']",mandarin,['none'],"['21,', 'female', '']",2.0,academic,['usa'],5.0,21
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=77,english2,female,"['birmingham,', 'uk']",english,"['german', 'mandarin', '']","['30,', 'female', '']",0.0,naturalistic,['uk'],30.0,30
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=11,arabic1,female,"['saudi', 'arabia']",arabic,['none'],"['38,', 'female', '']",12.0,academic,['usa'],4.0,38

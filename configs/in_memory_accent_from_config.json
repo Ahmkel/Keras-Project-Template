@@ -3,7 +3,7 @@
     "name": "base_accent_from_config"
   },
   "data_loader": {
-    "name": "base_accent_data_loader.BaseAccentDataLoader"
+    "name": "in_memory_accent_data_loader.InMemoryAccentDataLoader"
   },
   "model":{
     "name": "base_accent_model.BaseAccentModel",
@@ -13,7 +13,7 @@
     "num_classes": 3
   },
   "trainer":{
-    "name": "base_accent_trainer.BaseAccentTrainer",
+    "name": "in_memory_accent_trainer.InMemoryAccentTrainer",
     "num_epochs": 20,
     "batch_size": 4,
     "validation_split":0.25,
