@@ -44,11 +44,13 @@ class BaseAccentTrainer(BaseTrain):
             from bot.telegram_bot_callback import TelegramBotCallback
 
             # Create a DLBot instance
-            bot = DLBot(token=self.config.telegram.token, user_id=self.config.telegram.user_id)
+            user_id = None if not self.config.api.telegram.user_id else self.config.api.telegram.user_id
+            bot = DLBot(token=self.config.api.telegram.token,
+                        user_id=user_id)
             # Create a TelegramBotCallback instance
             self.callbacks.append(TelegramBotCallback(bot))
-
-        # # Creates log file for graphical interpretation using TensorBoard
+        #
+        # # # Creates log file for graphical interpretation using TensorBoard
         # tb = TensorBoard(log_dir='../logs', histogram_freq=0, batch_size=32, write_graph=True, write_grads=True,
         #                  write_images=True, embeddings_freq=0, embeddings_layer_names=None,
         #                  embeddings_metadata=None)
@@ -56,32 +58,40 @@ class BaseAccentTrainer(BaseTrain):
         # log experiments to comet.ml
         if hasattr(self.config.api, "comet"):
             from comet_ml import Experiment
-            experiment = Experiment(api_key=self.config.comet_api_key, project_name=self.config.exp_name)
+            experiment = Experiment(api_key=self.config.api.comet.api_key,
+                                    project_name=self.config.api.comet.exp_name)
             experiment.disable_mp()
-            experiment.log_multiple_params(self.config)
-            self.callbacks.append(experiment.get_keras_callback())
+            experiment.log_parameters(self.config)
+            self.callbacks.append(experiment.get_callback('keras'))
 
     def train(self):
 
-        history = self.model.fit(
+        # Image shifting
+        # used to augement in the input data
+        datagen = ImageDataGenerator(width_shift_range=0.05)
+
+        # steps per epoch is the number of rounds the generator goes within one epoch
+        steps_per_epoch = len(self.data[0]) / self.config.trainer.batch_size
+
+        # using a generator to load the data
+        history = self.model.fit_generator(
+            datagen.flow(self.data[0], self.data[1],
+                         batch_size=self.config.trainer.batch_size),
             self.data[0], self.data[1],
             epochs=self.config.trainer.num_epochs,
+            steps_per_epoch=steps_per_epoch,
             verbose=self.config.trainer.verbose_training,
-            batch_size=self.config.trainer.batch_size,
             validation_split=self.config.trainer.validation_split,
             callbacks=self.callbacks,
         )
-
-        self.loss.extend(history.history['loss'])
-        self.acc.extend(history.history['acc'])
-        self.val_loss.extend(history.history['val_loss'])
-        self.val_acc.extend(history.history['val_acc'])
-
-        # Image shifting
-        # datagen = ImageDataGenerator(width_shift_range=0.05)
+        #
+        # self.loss.extend(history.history['loss'])
+        # self.acc.extend(history.history['acc'])
+        # self.val_loss.extend(history.history['val_loss'])
+        # self.val_acc.extend(history.history['val_acc'])
 
         # # Fit model using ImageDataGenerator
-        # self.model.fit_generator(datagen.flow(X_train, y_train, batch_size=batch_size),
+        # self.model.fit_generator(datagen.flow(self.data[0], y_train, batch_size=batch_size),
         #                          steps_per_epoch=len(X_train) / 32
         #                          , epochs=EPOCHS,
         #                          callbacks=[es, tb, bot], validation_data=(X_validation, y_validation))

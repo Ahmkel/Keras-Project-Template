@@ -9,8 +9,8 @@
     "name": "base_accent_model.BaseAccentModel",
     "learning_rate": 0.001,
     "optimizer": "adadelta",
-    "input_shape": ""
-
+    "input_shape": "",
+    "num_classes": ""
   },
   "trainer":{
     "name": "base_accent_trainer.BaseAccentTrainer",

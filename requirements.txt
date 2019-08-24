@@ -6,3 +6,4 @@ BeautifulSoup4
 librosa
 dotmap
 comet-ml
+python-telegram-bot

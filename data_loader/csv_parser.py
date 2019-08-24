@@ -1,30 +1,5 @@
-import pandas as pd
-import sys
 from sklearn.model_selection import train_test_split
-
-
-# def filter_df(df):
-#     '''
-#     Function to filter audio files based on df columns
-#     df column options: [age,age_of_english_onset,age_sex,birth_place,english_learning_method,
-#     english_residence,length_of_english_residence,native_language,other_languages,sex]
-#     :param df (DataFrame): Full unfiltered DataFrame
-#     :return (DataFrame): Filtered DataFrame
-#     '''
-#
-#     # Example to filter arabic, mandarin, and english and limit to 73 audio files
-#     arabic = df[df['native_language'] == 'arabic']
-#     mandarin = df[df['native_language'] == 'mandarin']
-#     english = df[df.native_language == 'english'][:73]
-#     mandarin = mandarin[mandarin.length_of_english_residence < 10][:73]
-#     arabic = arabic[arabic.length_of_english_residence < 10][:73]
-#
-#     df = english.append(arabic)
-#     df = df.append(mandarin)
-#
-#
-#
-#     return df
+from keras import utils
 
 def filter_df(df):
     '''
@@ -60,13 +35,26 @@ def split_people(df, test_size=0.2):
     return train_test_split(df['language_num'], df['native_language'], test_size=test_size, random_state=1234)
 
 
-if __name__ == '__main__':
+def to_categorical(y):
     '''
-    Console command example:
-    python bio_data.csv
+    Converts list of languages into a binary class matrix
+    :param y (list): list of languages
+    :return (numpy array): binary class matrix
     '''
+    lang_dict = {}
+    for index, language in enumerate(set(y)):
+        lang_dict[language] = index
+    y = list(map(lambda x: lang_dict[x], y))
+    return utils.to_categorical(y, len(lang_dict))
 
-    csv_file = sys.argv[1]
-    df = pd.read_csv(csv_file)
-    filtered_df = filter_df(df)
-    print(split_people(filtered_df))
+
+# if __name__ == '__main__':
+#     '''
+#     Console command example:
+#     python bio_data.csv
+#     '''
+#
+#     csv_file = sys.argv[1]
+#     df = pd.read_csv(csv_file)
+#     filtered_df = filter_df(df)
+#     print(split_people(filtered_df))
