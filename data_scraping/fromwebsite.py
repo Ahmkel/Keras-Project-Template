@@ -8,6 +8,7 @@ import sys
 import re
 
 from data_loader.accent_data_loader import AccentDataLoader
+from data_scraping.constants import DEFAULT_LANGUAGES
 
 ROOT_URL = 'http://accent.gmu.edu/'
 BROWSE_LANGUAGE_URL = 'browse_language.php?function=find&language={}'
@@ -177,8 +178,10 @@ def scrape(destination_file,
     df.drop_duplicates(subset='language_num', inplace=True)
 
     if only_usa:
-    #     df.reset_index(inplace=True)
         df.drop(df[(df.native_language == "english") & (df.birth_place != "usa")].index, inplace=True)
+
+    # Filter metadata to retrieve only files desired
+    df.drop(df[(df.length_of_english_residence > 10) & (df.native_language != "english")].index, inplace=True)
 
     df.to_csv(output_file, index=False)
 

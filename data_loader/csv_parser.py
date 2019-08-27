@@ -1,6 +1,7 @@
 from sklearn.model_selection import train_test_split
 from keras import utils
 
+
 def filter_df(df):
     '''
     Function to filter audio files based on df columns
@@ -13,6 +14,9 @@ def filter_df(df):
     arabic = df[df.native_language == 'arabic']
     mandarin = df[df.native_language == 'mandarin']
     english = df[df.native_language == 'english']
+    russian = df[df.native_language == 'english']
+    amharic = df[df.native_language == 'english']
+    french = df[df.native_language == 'english']
 
     mandarin = mandarin[mandarin.length_of_english_residence < 10]
     arabic = arabic[arabic.length_of_english_residence < 10]

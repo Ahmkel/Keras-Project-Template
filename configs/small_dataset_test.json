@@ -15,7 +15,7 @@
   },
   "trainer":{
     "name": "accent_trainer.AccentTrainer",
-    "num_epochs": 20,
+    "num_epochs": 2,
     "batch_size": 32,
     "validation_split":0.25,
     "verbose_training": true

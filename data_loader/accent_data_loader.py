@@ -1,6 +1,5 @@
 import multiprocessing
 import os
-from collections import defaultdict
 
 import numpy as np
 import pandas as pd
@@ -8,7 +7,7 @@ from joblib import Parallel, delayed
 
 from base.base_data_loader import BaseDataLoader
 
-from data_loader.csv_parser import split_people, to_categorical, filter_df
+from data_loader.csv_parser import split_people, to_categorical
 from data_loader.sound_utils import SoundUtils, process_sound_file
 from tqdm import tqdm
 
@@ -56,9 +55,7 @@ class AccentDataLoader(BaseDataLoader):
     def init_model(self):
 
         # Load metadata
-        df = pd.read_csv(self._csv_path())
-        # Filter metadata to retrieve only files desired
-        filtered_df = filter_df(df)
+        filtered_df = pd.read_csv(self._csv_path())
 
         # Train test split
         X_train, X_test, y_train, y_test = split_people(filtered_df)
@@ -67,7 +64,7 @@ class AccentDataLoader(BaseDataLoader):
         y_test = to_categorical(y_test)
 
         # Get resampled wav files using multiprocessing
-        if config.debug:
+        if self.config.debug:
             print('Loading wav files....')
 
         X_train = self.preproccess_data(X_train)
