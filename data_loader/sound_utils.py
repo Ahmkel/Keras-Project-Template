@@ -1,3 +1,5 @@
+import os
+
 import librosa
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler
@@ -7,6 +9,18 @@ RATE = 24000
 N_MFCC = 13
 COL_SIZE = 30
 EPOCHS = 10  # 35#250
+
+
+def mfcc_from_file(mfcc_from_file, mfcc_dir='datasets/audio/mfcc'):
+    # file_path = os.path.join(mfcc_dir, mfcc_from_file)
+    arr = np.load(mfcc_from_file + '.npy')
+
+    return arr
+
+
+def mfcc_to_file(file_name, np_array, mfcc_dir='datasets/audio/mfcc'):
+    # file_path = os.path.join(mfcc_dir, file_name)
+    np.save(file_name + '.npy', np_array)
 
 
 def get_wav(file_path):
@@ -28,16 +42,37 @@ def to_mfcc(wav):
     '''
     # print("started")
     mfcc = librosa.feature.mfcc(y=wav, sr=RATE, n_mfcc=N_MFCC)
-    # print("finished")
+
     return mfcc
 
 
-def process_sound_file(file_path):
+def np_cache(func):
+
+    def cache(*args, **kwargs):
+
+        # check if we already have it cached locally
+        if os.path.exists(file_path + ".npy"):
+            return mfcc_from_file(file_path, mfcc_dir)
+
+        # call the process function
+        value = func(*args, **kwargs)
+
+        # save in a file
+        mfcc_to_file(name, mfcc)
+
+        return value
+
+    return cache
+
+
+@np_cache
+def process_sound_file(file_path, mfcc_dir='datasets/audio/mfcc'):
     """
     process a sound file - reading a wav and converting it to mfcc
     :param file_name:
     :return:
     """
+
     return to_mfcc(get_wav(file_path))
 
 
