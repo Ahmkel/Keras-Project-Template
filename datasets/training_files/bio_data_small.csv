@@ -1,0 +1,404 @@
+href,language_num,sex,birth_place,native_language,other_languages,age_sex,age_of_english_onset,english_learning_method,english_residence,length_of_english_residence,age
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=61,english1,male,usa,english,"['mandarin', '']","['42,', 'male', '']",0.0,naturalistic,['usa'],41.0,42
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=110,english5,male,usa,english,['none'],"['62,', 'male', '']",0.0,naturalistic,['usa'],62.0,  62
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=121,english6,female,usa,english,"['french', 'spanish', '']","['45,', 'female', '']",0.0,naturalistic,['usa'],45.0,  45
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=132,english7,male,usa,english,"['spanish', 'french', '']","['52,', 'male', '']",0.0,naturalistic,['usa'],52.0,  52
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=154,english9,female,usa,english,"['spanish', '']","['48,', 'female', '']",0.0,naturalistic,['usa'],48.0,  48
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=62,english10,female,usa,english,['none'],"['35,', 'female', '']",0.0,naturalistic,['usa'],35.0,  35
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=72,english15,female,usa,english,['none'],"['7,', 'female', '']",0.0,naturalistic,['usa'],7.0,  7
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=73,english16,male,usa,english,"['spanish', '']","['21,', 'male', '']",0.0,naturalistic,['usa'],21.0,  21
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=74,english17,male,usa,english,['none'],"['79,', 'male', '']",0.0,naturalistic,['usa'],79.0,  79
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=75,english18,female,usa,english,['none'],"['39,', 'female', '']",0.0,naturalistic,['usa'],39.0,  39
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=76,english19,male,usa,english,"['spanish', '']","['53,', 'male', '']",0.0,naturalistic,['usa'],53.0,  53
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=78,english20,female,usa,english,['none'],"['27,', 'female', '']",0.0,naturalistic,['usa'],27.0,  27
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=79,english21,female,usa,english,"['italian', '']","['37,', 'female', '']",0.0,naturalistic,['usa'],37.0,  37
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=81,english23,male,usa,english,['none'],"['43,', 'male', '']",0.0,naturalistic,['usa'],43.0,  43
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=83,english25,male,usa,english,['none'],"['57,', 'male', '']",0.0,naturalistic,['usa'],57.0,  57
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=84,english26,male,usa,english,['none'],"['71,', 'male', '']",0.0,naturalistic,['usa'],71.0,  71
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=85,english27,female,usa,english,['none'],"['37,', 'female', '']",0.0,naturalistic,['usa'],37.0,  37
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=91,english32,female,usa,english,['none'],"['50,', 'female', '']",0.0,naturalistic,['usa'],50.0,  50
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=92,english33,male,usa,english,['none'],"['21,', 'male', '']",0.0,naturalistic,['usa'],21.0,  21
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=93,english34,female,usa,english,"['french', '']","['18,', 'female', '']",0.0,naturalistic,['usa'],18.0,  18
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=94,english35,female,usa,english,"['spanish', '']","['60,', 'female', '']",0.0,naturalistic,['usa'],60.0,  60
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=95,english36,male,usa,english,['none'],"['60,', 'male', '']",0.0,naturalistic,['usa'],60.0,  60
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=98,english39,female,usa,english,['none'],"['59,', 'female', '']",0.0,naturalistic,['usa'],59.0,  59
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=104,english44,female,usa,english,"['spanish', 'french', '']","['63,', 'female', '']",0.0,naturalistic,['usa'],63.0,  63
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=105,english45,male,usa,english,['none'],"['52,', 'male', '']",0.0,naturalistic,['usa'],52.0,  52
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=106,english46,male,usa,english,['none'],"['73,', 'male', '']",0.0,naturalistic,['usa'],73.0,  73
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=107,english47,female,usa,english,['none'],"['76,', 'female', '']",0.0,naturalistic,['usa'],76.0,  76
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=109,english49,male,usa,english,['none'],"['43,', 'male', '']",0.0,naturalistic,['usa'],43.0,  43
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=111,english50,female,usa,english,"['french', '']","['29,', 'female', '']",0.0,naturalistic,['usa'],29.0,  29
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=112,english51,male,usa,english,"['italian', '']","['67,', 'male', '']",0.0,naturalistic,['usa'],67.0,  67
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=114,english53,male,usa,english,['none'],"['63,', 'male', '']",0.0,naturalistic,['usa'],63.0,  63
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=115,english54,female,usa,english,['none'],"['40,', 'female', '']",0.0,naturalistic,['usa'],40.0,  40
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=116,english55,female,usa,english,['none'],"['53,', 'female', '']",0.0,naturalistic,['usa'],53.0,  53
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=120,english59,male,usa,english,"['greek', 'german', '']","['30,', 'male', '']",0.0,naturalistic,['usa'],30.0,  30
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=122,english60,male,usa,english,['none'],"['18,', 'male', '']",0.0,naturalistic,['usa'],18.0,  18
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=124,english62,male,usa,english,['none'],"['30,', 'male', '']",0.0,naturalistic,['usa'],30.0,  30
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=125,english63,male,usa,english,"['spanish', '']","['21,', 'male', '']",0.0,naturalistic,['usa'],21.0,  21
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=127,english65,male,usa,english,['none'],"['47,', 'male', '']",0.0,naturalistic,['usa'],47.0,  47
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=128,english66,male,usa,english,['none'],"['19,', 'male', '']",0.0,naturalistic,['usa'],19.0,  19
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=129,english67,male,usa,english,"['french', '']","['37,', 'male', '']",0.0,naturalistic,['usa'],37.0,  37
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=130,english68,male,usa,english,['none'],"['52,', 'male', '']",0.0,naturalistic,['usa'],52.0,  52
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=133,english70,male,usa,english,['none'],"['21,', 'male', '']",0.0,naturalistic,['usa'],21.0,  21
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=134,english71,male,usa,english,['none'],"['20,', 'male', '']",0.0,naturalistic,['usa'],20.0,  20
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=137,english74,male,usa,english,"['spanish', '']","['21,', 'male', '']",0.0,naturalistic,['usa'],21.0,  21
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=138,english75,male,usa,english,['none'],"['32,', 'male', '']",0.0,naturalistic,['usa'],32.0,  32
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=139,english76,female,usa,english,"['french', 'spanish', 'hebrew', '']","['18,', 'female', '']",0.0,naturalistic,['usa'],18.0,  18
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=141,english78,female,usa,english,"['french', '']","['20,', 'female', '']",0.0,naturalistic,['usa'],20.0,  20
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=142,english79,male,usa,english,['none'],"['73,', 'male', '']",0.0,naturalistic,['usa'],73.0,  73
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=145,english81,male,usa,english,"['spanish', '']","['30,', 'male', '']",0.0,naturalistic,['usa'],30.0,  30
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=146,english82,female,usa,english,['none'],"['50,', 'female', '']",0.0,naturalistic,['usa'],50.0,  50
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=147,english83,female,usa,english,"['french', '']","['42,', 'female', '']",0.0,naturalistic,['usa'],42.0,  42
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=150,english86,male,usa,english,"['spanish', '']","['50,', 'male', '']",0.0,naturalistic,['usa'],50.0,  50
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=152,english88,male,usa,english,['none'],"['18,', 'male', '']",0.0,naturalistic,['usa'],18.0,  18
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=153,english89,male,usa,english,"['spanish', '']","['18,', 'male', '']",0.0,naturalistic,['usa'],18.0,  18
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=155,english90,male,usa,english,['none'],"['53,', 'male', '']",0.0,naturalistic,['usa'],53.0,  53
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=157,english92,female,usa,english,['none'],"['22,', 'female', '']",0.0,naturalistic,['usa'],22.0,  22
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=158,english93,female,usa,english,['none'],"['22,', 'female', '']",0.0,naturalistic,['usa'],22.0,  22
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=159,english94,female,usa,english,['none'],"['55,', 'female', '']",0.0,naturalistic,['usa'],55.0,  55
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=160,english95,male,usa,english,['none'],"['18,', 'male', '']",0.0,naturalistic,['usa'],18.0,  18
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=161,english96,male,usa,english,"['russian', '']","['31,', 'male', '']",0.0,naturalistic,['usa'],31.0,  31
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=162,english97,male,usa,english,"['spanish', '']","['42,', 'male', '']",0.0,naturalistic,['usa'],42.0,  42
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=163,english98,male,usa,english,"['spanish', '']","['22,', 'male', '']",0.0,naturalistic,['usa'],22.0,  22
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=164,english99,female,usa,english,"['french', 'spanish', '']","['52,', 'female', '']",0.0,naturalistic,['usa'],52.0,  52
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=63,english100,female,usa,english,['none'],"['23,', 'female', '']",0.0,naturalistic,['usa'],23.0,  23
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=65,english102,male,usa,english,['none'],"['22,', 'male', '']",0.0,naturalistic,['usa'],22.0,  22
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=66,english103,male,usa,english,"['german', '']","['21,', 'male', '']",0.0,naturalistic,['usa'],21.0,  21
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=67,english104,female,usa,english,"['spanish', '']","['18,', 'female', '']",0.0,naturalistic,['usa'],18.0,  18
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=408,english106,female,usa,english,"['spanish', '']","['39,', 'female', '']",0.0,naturalistic,['usa'],39.0,  39
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=416,english107,male,usa,english,"['spanish', '']","['19,', 'male', '']",0.0,naturalistic,['usa'],19.0,  19
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=420,english109,female,usa,english,"['irish', '']","['26,', 'female', '']",0.0,naturalistic,['usa'],26.0,  26
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=442,english114,female,usa,english,['none'],"['38,', 'female', '']",0.0,naturalistic,['usa'],38.0,  38
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=444,english116,male,usa,english,['none'],"['56,', 'male', '']",0.0,naturalistic,['usa'],56.0,  56
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=445,english117,female,usa,english,['none'],"['60,', 'female', '']",0.0,naturalistic,['usa'],60.0,  60
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=446,english118,male,usa,english,['none'],"['19,', 'male', '']",0.0,naturalistic,['usa'],17.0,  19
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=465,english121,male,usa,english,"['french', '']","['21,', 'male', '']",0.0,naturalistic,['usa'],21.0,  21
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=469,english123,female,usa,english,['none'],"['28,', 'female', '']",0.0,naturalistic,"['usa,', 'uk']",23.0,  28
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=480,english124,male,usa,english,['none'],"['38,', 'male', '']",0.0,naturalistic,['usa'],38.0,  38
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=487,english126,female,usa,english,"['spanish', '']","['34,', 'female', '']",0.0,naturalistic,['usa'],34.0,  34
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=489,english127,male,usa,english,['none'],"['39,', 'male', '']",0.0,naturalistic,['usa'],39.0,  39
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=490,english128,female,usa,english,"['french', '']","['20,', 'female', '']",0.0,naturalistic,['usa'],20.0,  20
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=497,english131,male,usa,english,['none'],"['23,', 'male', '']",0.0,naturalistic,['usa'],23.0,  23
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=504,english133,female,usa,english,"['spanish', '']","['36,', 'female', '']",0.0,naturalistic,['usa'],36.0,  36
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=507,english135,male,usa,english,['none'],"['22,', 'male', '']",0.0,naturalistic,['usa'],22.0,  22
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=509,english137,male,usa,english,"['japanese', '']","['26,', 'male', '']",0.0,naturalistic,['usa'],26.0,  26
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=510,english138,female,usa,english,"['german', '']","['25,', 'female', '']",0.0,naturalistic,['usa'],25.0,  25
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=511,english139,male,usa,english,['none'],"['20,', 'male', '']",0.0,naturalistic,['usa'],20.0,  20
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=517,english142,male,usa,english,"['french', '']","['19,', 'male', '']",0.0,naturalistic,['usa'],19.0,  19
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=518,english143,male,usa,english,"['french', '']","['42,', 'male', '']",0.0,naturalistic,"['usa,', 'uk']",42.0,  42
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=522,english146,male,usa,english,"['spanish', '']","['22,', 'male', '']",0.0,naturalistic,['usa'],22.0,  22
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=523,english147,female,usa,english,"['portuguese', '']","['40,', 'female', '']",0.0,naturalistic,['usa'],40.0,  40
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=526,english149,male,usa,english,['none'],"['18,', 'male', '']",0.0,naturalistic,['usa'],18.0,  18
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=527,english150,male,usa,english,"['spanish', '']","['31,', 'male', '']",0.0,naturalistic,['usa'],31.0,  31
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=528,english151,male,usa,english,"['spanish', '']","['18,', 'male', '']",0.0,naturalistic,['usa'],18.0,  18
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=535,english155,male,usa,english,['none'],"['35,', 'male', '']",0.0,naturalistic,['usa'],35.0,  35
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=538,english157,male,usa,english,['none'],"['35,', 'male', '']",0.0,naturalistic,['usa'],35.0,  35
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=540,english158,female,usa,english,"['spanish', 'german', '']","['18,', 'female', '']",0.0,naturalistic,['usa'],18.0,  18
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=542,english160,female,usa,english,['none'],"['21,', 'female', '']",0.0,naturalistic,['usa'],21.0,  21
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=546,english161,female,usa,english,['none'],"['75,', 'female', '']",0.0,naturalistic,['usa'],75.0,  75
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=548,english162,female,usa,english,['none'],"['41,', 'female', '']",0.0,naturalistic,['usa'],39.0,  41
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=547,english163,male,usa,english,"['german', 'dutch', '']","['41,', 'male', '']",0.0,naturalistic,['usa'],39.0,  41
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=550,english165,female,usa,english,"['french', 'spanish', 'german', '']","['43,', 'female', '']",0.0,naturalistic,['usa'],43.0,  43
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=551,english166,male,usa,english,"['spanish', '']","['18,', 'male', '']",0.0,naturalistic,['usa'],18.0,  18
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=552,english167,male,usa,english,"['spanish', '']","['43,', 'male', '']",0.0,naturalistic,['usa'],43.0,  43
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=554,english168,male,usa,english,"['german', '']","['40,', 'male', '']",0.0,naturalistic,['usa'],25.0,  40
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=555,english169,male,usa,english,"['spanish', 'esperanto', '']","['18,', 'male', '']",0.0,naturalistic,['usa'],18.0,  18
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=556,english170,female,usa,english,['none'],"['50,', 'female', '']",0.0,naturalistic,['usa'],50.0,  50
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=563,english171,male,usa,english,"['french', 'spanish', 'italian', '']","['21,', 'male', '']",0.0,naturalistic,['usa'],21.0,  21
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=567,english173,male,usa,english,['none'],"['19,', 'male', '']",0.0,naturalistic,['usa'],19.0,  19
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=572,english175,male,usa,english,"['mandarin', '']","['24,', 'male', '']",0.0,naturalistic,['usa'],21.0,  24
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=573,english176,female,usa,english,"['spanish', 'french', 'afrikaans', '']","['18,', 'female', '']",0.0,naturalistic,['usa'],18.0,  18
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=574,english177,female,usa,english,['none'],"['23,', 'female', '']",0.0,naturalistic,['usa'],23.0,  23
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=583,english178,male,usa,english,['none'],"['30,', 'male', '']",0.0,naturalistic,['usa'],30.0,  30
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=584,english179,male,usa,english,"['german', 'russian', '']","['57,', 'male', '']",0.0,naturalistic,['usa'],55.0,  57
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=585,english180,male,usa,english,['none'],"['20,', 'male', '']",0.0,naturalistic,['usa'],20.0,  20
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=586,english181,male,usa,english,['none'],"['68,', 'male', '']",0.0,naturalistic,['usa'],68.0,  68
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=590,english182,male,usa,english,"['italian', 'spanish', '']","['50,', 'male', '']",0.0,naturalistic,['usa'],50.0,  50
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=597,english184,female,usa,english,"['spanish', '']","['18,', 'female', '']",0.0,naturalistic,['usa'],18.0,  18
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=605,english186,female,usa,english,['none'],"['39,', 'female', '']",0.0,naturalistic,['usa'],39.0,  39
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=606,english187,female,usa,english,['none'],"['42,', 'female', '']",0.0,naturalistic,['usa'],42.0,  42
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=617,english189,male,usa,english,['none'],"['19,', 'male', '']",0.0,naturalistic,['usa'],19.0,  19
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=618,english190,male,usa,english,"['spanish', 'koine', 'greek', '']","['27,', 'male', '']",0.0,naturalistic,['usa'],28.0,  27
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=631,english191,male,usa,english,"['mandarin', 'russian', 'german', '']","['19,', 'male', '']",0.0,naturalistic,['usa'],19.0,  19
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=636,english192,female,usa,english,['none'],"['27,', 'female', '']",0.0,naturalistic,['usa'],27.0,  27
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=637,english193,male,usa,english,['none'],"['32,', 'male', '']",0.0,naturalistic,['usa'],32.0,  32
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=639,english195,female,usa,english,"['french', 'russian', 'german', 'norwegian', '']","['21,', 'female', '']",0.0,naturalistic,['usa'],21.0,  21
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=662,english197,male,usa,english,['none'],"['22,', 'male', '']",0.0,naturalistic,['usa'],22.0,  22
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=663,english198,male,usa,english,['none'],"['56,', 'male', '']",0.0,naturalistic,['usa'],56.0,  56
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=664,english199,male,usa,english,['none'],"['25,', 'male', '']",0.0,naturalistic,['usa'],25.0,  25
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=667,english200,female,usa,english,"['spanish', '']","['22,', 'female', '']",0.0,naturalistic,['usa'],22.0,  22
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=668,english201,female,usa,english,"['polish', '']","['26,', 'female', '']",0.0,naturalistic,['usa'],26.0,  26
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=673,english202,male,usa,english,"['esperanto', '']","['19,', 'male', '']",0.0,naturalistic,['usa'],19.0,  19
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=674,english203,female,usa,english,"['german', 'french', '']","['63,', 'female', '']",0.0,naturalistic,['usa'],31.0,  63
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=678,english204,male,usa,english,"['french', 'german', '']","['53,', 'male', '']",0.0,naturalistic,['usa'],49.0,  53
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=679,english205,female,usa,english,['none'],"['45,', 'female', '']",0.0,naturalistic,['usa'],45.0,  45
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=684,english207,female,usa,english,"['spanish', '']","['23,', 'female', '']",0.0,naturalistic,['usa'],23.0,  23
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=695,english208,male,usa,english,['none'],"['46,', 'male', '']",0.0,naturalistic,['usa'],29.0,  46
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=720,english211,male,usa,english,['none'],"['30,', 'male', '']",0.0,naturalistic,['usa'],30.0,  30
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=729,english212,male,usa,english,['none'],"['24,', 'male', '']",0.0,naturalistic,['usa'],24.0,  24
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=734,english213,male,usa,english,['none'],"['38,', 'male', '']",0.0,naturalistic,['usa'],38.0,  38
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=737,english214,male,usa,english,"['spanish', '']","['26,', 'male', '']",0.0,naturalistic,['usa'],26.0,  26
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=739,english216,female,usa,english,"['spanish', '']","['48,', 'female', '']",0.0,naturalistic,['usa'],48.0,  48
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=747,english218,female,usa,english,"['latin', 'spanish', '']","['27,', 'female', '']",0.0,naturalistic,['usa'],27.0,  27
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=748,english219,female,usa,english,"['spanish', '']","['38,', 'female', '']",0.0,naturalistic,['usa'],38.0,  38
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=749,english220,female,usa,english,['none'],"['18,', 'female', '']",0.0,naturalistic,['usa'],18.0,  18
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=764,english222,female,usa,english,['none'],"['18,', 'female', '']",0.0,naturalistic,['usa'],18.0,  18
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=767,english223,male,usa,english,['none'],"['18,', 'male', '']",0.0,naturalistic,['usa'],18.0,  18
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=775,english229,male,usa,english,"['french', '']","['25,', 'male', '']",0.0,naturalistic,['usa'],25.0,  25
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=791,english231,male,usa,english,"['spanish', '']","['22,', 'male', '']",0.0,naturalistic,['usa'],22.0,  22
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=798,english232,female,usa,english,"['italian', 'spanish', '']","['32,', 'female', '']",0.0,naturalistic,['usa'],32.0,  32
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=794,english234,male,usa,english,"['portuguese', 'spanish', 'american', 'sign', 'language', '']","['49,', 'male', '']",0.0,naturalistic,['usa'],49.0,  49
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=795,english235,female,usa,english,"['spanish', '']","['52,', 'female', '']",0.0,naturalistic,['usa'],52.0,  52
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=799,english236,male,usa,english,"['german', 'french', '']","['44,', 'male', '']",0.0,naturalistic,['usa'],34.0,  44
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=801,english237,female,usa,english,"['spanish', '']","['22,', 'female', '']",0.0,naturalistic,['usa'],22.0,  22
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=818,english242,female,usa,english,['none'],"['77,', 'female', '']",0.0,naturalistic,['usa'],77.0,  77
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=821,english244,male,usa,english,"['spanish', '']","['23,', 'male', '']",0.0,naturalistic,['usa'],13.0,  23
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=824,english245,male,usa,english,"['japanese', 'spanish', '']","['25,', 'male', '']",0.0,naturalistic,['usa'],22.0,  25
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=825,english246,male,usa,english,['none'],"['32,', 'male', '']",0.0,naturalistic,['usa'],32.0,  32
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=840,english248,female,usa,english,"['french', '']","['18,', 'female', '']",0.0,naturalistic,['usa'],18.0,  18
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=850,english249,female,usa,english,"['spanish', '']","['29,', 'female', '']",0.0,naturalistic,['usa'],29.0,  29
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=855,english251,male,usa,english,"['french', 'spanish', 'italian', 'japanese', '']","['21,', 'male', '']",0.0,naturalistic,['usa'],21.0,  21
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=856,english252,female,usa,english,"['german', '']","['25,', 'female', '']",0.0,naturalistic,['usa'],25.0,  25
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=858,english254,male,usa,english,"['spanish', '']","['39,', 'male', '']",0.0,naturalistic,['usa'],39.0,  39
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=861,english256,male,usa,english,['none'],"['23,', 'male', '']",0.0,naturalistic,['usa'],23.0,  23
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=863,english257,male,usa,english,['none'],"['24,', 'male', '']",0.0,naturalistic,['usa'],24.0,  24
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=871,english260,female,usa,english,['none'],"['18,', 'female', '']",0.0,naturalistic,['usa'],18.0,  18
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=875,english261,female,usa,english,"['spanish', '']","['59,', 'female', '']",0.0,naturalistic,['usa'],59.0,  59
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=876,english262,male,usa,english,"['german', '']","['60,', 'male', '']",0.0,naturalistic,['usa'],60.0,  60
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=884,english263,male,usa,english,"['spanish', '']","['21,', 'male', '']",0.0,naturalistic,['usa'],21.0,  21
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=889,english264,male,usa,english,"['french', 'german', '']","['21,', 'male', '']",0.0,naturalistic,['usa'],21.0,  21
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=890,english265,male,usa,english,"['korean', 'german', '']","['31,', 'male', '']",0.0,naturalistic,['usa'],27.0,  31
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=899,english266,male,usa,english,"['french', 'spanish', '']","['18,', 'male', '']",0.0,,['usa'],18.0,  18
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=905,english272,male,usa,english,"['spanish', '']","['20,', 'male', '']",0.0,naturalistic,['usa'],20.0,  20
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=907,english273,male,usa,english,"['german', '']","['46,', 'male', '']",0.0,naturalistic,['usa'],46.0,  46
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=912,english275,female,usa,english,['none'],"['20,', 'female', '']",0.0,naturalistic,['usa'],20.0,  20
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=918,english276,female,usa,english,['none'],"['50,', 'female', '']",0.0,naturalistic,['usa'],50.0,  50
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=919,english277,female,usa,english,"['german', '']","['48,', 'female', '']",0.0,naturalistic,['usa'],42.0,  48
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=921,english278,female,usa,english,['none'],"['18,', 'female', '']",0.0,naturalistic,['usa'],18.0,  18
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=937,english281,male,usa,english,"['french', '']","['23,', 'male', '']",0.0,naturalistic,['usa'],23.0,  23
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=939,english282,male,usa,english,['none'],"['20,', 'male', '']",0.0,naturalistic,['usa'],20.0,  20
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=951,english283,male,usa,english,"['spanish', '']","['18,', 'male', '']",0.0,naturalistic,['usa'],18.0,  18
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=952,english284,male,usa,english,"['spanish', '']","['33,', 'male', '']",0.0,naturalistic,['usa'],33.0,  33
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=977,english286,female,usa,english,"['french', 'latin', 'hebrew', 'spanish', '']","['21,', 'female', '']",0.0,naturalistic,['usa'],21.0,  21
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=982,english288,female,usa,english,['none'],"['26,', 'female', '']",0.0,naturalistic,['usa'],26.0,  26
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=983,english289,female,usa,english,"['italian', 'spanish', 'latin', 'french', '']","['19,', 'female', '']",0.0,naturalistic,['usa'],19.0,  19
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=986,english290,male,usa,english,['none'],"['20,', 'male', '']",0.0,naturalistic,['usa'],20.0,  20
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1051,english292,male,usa,english,['none'],"['38,', 'male', '']",0.0,naturalistic,['usa'],38.0,  38
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1052,english293,female,usa,english,['none'],"['22,', 'female', '']",0.0,naturalistic,['usa'],22.0,  22
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1071,english297,male,usa,english,"['german', '']","['19,', 'male', '']",0.0,naturalistic,['usa'],19.0,  19
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1086,english303,female,usa,english,"['arabic', '']","['45,', 'female', '']",0.0,naturalistic,['usa'],45.0,  45
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1100,english307,male,usa,english,"['spanish', '']","['48,', 'male', '']",0.0,naturalistic,"['usa,', 'new', 'zealand']",48.0,  48
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1110,english311,female,usa,english,['none'],"['38,', 'female', '']",0.0,naturalistic,['usa'],38.0,  38
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1119,english313,male,usa,english,"['spanish', '']","['28,', 'male', '']",0.0,naturalistic,['usa'],28.0,  28
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1120,english314,female,usa,english,"['french', '']","['26,', 'female', '']",0.0,naturalistic,['usa'],26.0,  26
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1121,english315,male,usa,english,['none'],"['25,', 'male', '']",0.0,naturalistic,['usa'],25.0,  25
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1122,english316,male,usa,english,['none'],"['33,', 'male', '']",0.0,naturalistic,['usa'],33.0,  33
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1132,english317,male,usa,english,['none'],"['26,', 'male', '']",0.0,naturalistic,['usa'],26.0,  26
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1163,english321,male,usa,english,"['yiddish', 'french', 'hebrew', '']","['52,', 'male', '']",0.0,naturalistic,['usa'],52.0,  52
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1176,english325,male,usa,english,"['italian', '']","['32,', 'male', '']",0.0,naturalistic,['usa'],32.0,  32
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1188,english326,male,usa,english,['none'],"['53,', 'male', '']",0.0,naturalistic,['usa'],50.0,  53
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1205,english327,male,usa,english,['none'],"['27,', 'male', '']",0.0,naturalistic,['usa'],27.0,  27
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1206,english328,female,usa,english,"['thai', '']","['23,', 'female', '']",0.0,naturalistic,['usa'],23.0,  23
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1207,english329,female,usa,english,"['french', '']","['21,', 'female', '']",0.0,naturalistic,['usa'],19.0,  21
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1208,english330,female,usa,english,"['french', '']","['18,', 'female', '']",0.0,naturalistic,['usa'],18.0,  18
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1212,english332,female,usa,english,['none'],"['20,', 'female', '']",0.0,naturalistic,['usa'],20.0,  20
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1214,english333,female,usa,english,['none'],"['32,', 'female', '']",0.0,naturalistic,['usa'],29.0,  32
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1216,english335,male,usa,english,['none'],"['6,', 'male', '']",0.0,naturalistic,['usa'],6.0,  6
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1217,english336,female,usa,english,['none'],"['46,', 'female', '']",0.0,naturalistic,['usa'],44.0,  46
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1218,english337,female,usa,english,['none'],"['84,', 'female', '']",0.0,naturalistic,"['usa,', 'canada']",84.0,  84
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1220,english339,male,usa,english,['none'],"['54,', 'male', '']",0.0,naturalistic,"['usa,', 'canada']",54.0,  54
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1222,english340,male,usa,english,['none'],"['19,', 'male', '']",0.0,naturalistic,['usa'],19.0,  19
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1224,english341,female,usa,english,"['german', '']","['23,', 'female', '']",0.0,naturalistic,['usa'],23.0,  23
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1225,english342,male,usa,english,['none'],"['33,', 'male', '']",0.0,naturalistic,['usa'],33.0,  33
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1226,english343,male,usa,english,"['german', 'spanish', '']","['23,', 'male', '']",0.0,naturalistic,['usa'],23.0,  23
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1232,english344,female,usa,english,"['french', 'spanish', '']","['19,', 'female', '']",0.0,naturalistic,['usa'],19.0,  19
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1233,english345,male,usa,english,"['spanish', '']","['20,', 'male', '']",0.0,naturalistic,['usa'],20.0,  20
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1235,english346,male,usa,english,"['french', '']","['60,', 'male', '']",0.0,naturalistic,['usa'],60.0,  60
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1236,english347,female,usa,english,"['spanish', '']","['22,', 'female', '']",0.0,naturalistic,['usa'],22.0,  22
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1239,english349,female,usa,english,['none'],"['24,', 'female', '']",0.0,naturalistic,['usa'],24.0,  24
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1242,english351,male,usa,english,['none'],"['37,', 'male', '']",0.0,naturalistic,['usa'],37.0,  37
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1256,english355,male,usa,english,"['vietnamese', '']","['19,', 'male', '']",0.0,naturalistic,['usa'],19.0,  19
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1258,english357,male,usa,english,"['german', '']","['24,', 'male', '']",0.0,naturalistic,['usa'],24.0,  24
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1277,english360,female,usa,english,"['hebrew', '']","['19,', 'female', '']",0.0,naturalistic,['usa'],19.0,  19
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1280,english361,female,usa,english,"['spanish', 'chinese', '']","['20,', 'female', '']",0.0,naturalistic,['usa'],20.0,  20
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1297,english369,male,usa,english,"['spanish', '']","['27,', 'male', '']",0.0,naturalistic,['usa'],27.0,  27
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1303,english371,female,usa,english,"['french', '']","['27,', 'female', '']",0.0,naturalistic,"['usa,', 'canada']",27.0,  27
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1307,english372,male,usa,english,['none'],"['80,', 'male', '']",0.0,naturalistic,['usa'],80.0,  80
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1308,english373,male,usa,english,['none'],"['22,', 'male', '']",0.0,naturalistic,['usa'],22.0,  22
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1312,english375,male,usa,english,"['spanish', '']","['28,', 'male', '']",0.0,naturalistic,"['usa,', 'uk']",28.0,  28
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1315,english376,male,usa,english,['none'],"['46,', 'male', '']",0.0,naturalistic,['usa'],46.0,  46
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1319,english377,female,usa,english,['none'],"['32,', 'female', '']",0.0,naturalistic,['usa'],32.0,  32
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1320,english378,female,usa,english,['none'],"['38,', 'female', '']",0.0,naturalistic,['usa'],38.0,  38
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1321,english379,male,usa,english,['none'],"['43,', 'male', '']",0.0,naturalistic,['usa'],43.0,  43
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1323,english380,female,usa,english,"['spanish', 'french', '']","['34,', 'female', '']",0.0,naturalistic,['usa'],33.0,  34
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1324,english381,male,usa,english,['none'],"['85,', 'male', '']",0.0,naturalistic,['usa'],85.0,  85
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1325,english382,male,usa,english,['none'],"['34,', 'male', '']",0.0,naturalistic,['usa'],29.0,  34
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1326,english383,female,usa,english,['none'],"['32,', 'female', '']",0.0,naturalistic,['usa'],22.0,  32
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1327,english384,male,usa,english,['none'],"['57,', 'male', '']",0.0,naturalistic,['usa'],57.0,  57
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1328,english385,female,usa,english,['none'],"['77,', 'female', '']",0.0,naturalistic,['usa'],77.0,  77
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1330,english386,female,usa,english,"['spanish', '']","['56,', 'female', '']",0.0,naturalistic,['usa'],56.0,  56
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1331,english387,female,usa,english,"['spanish', '']","['21,', 'female', '']",0.0,naturalistic,['usa'],21.0,  21
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1332,english388,female,usa,english,['none'],"['70,', 'female', '']",0.0,naturalistic,['usa'],70.0,  70
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1333,english389,female,usa,english,['none'],"['71,', 'female', '']",0.0,naturalistic,['usa'],71.0,  71
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1334,english390,male,usa,english,"['mandarin', 'taiwanese', '']","['74,', 'male', '']",0.0,naturalistic,['usa'],67.0,  74
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1335,english391,female,usa,english,['none'],"['84,', 'female', '']",0.0,naturalistic,['usa'],84.0,  84
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1336,english392,male,usa,english,['none'],"['62,', 'male', '']",0.0,naturalistic,['usa'],62.0,  62
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1337,english393,female,usa,english,"['french', '']","['58,', 'female', '']",0.0,naturalistic,['usa'],58.0,  58
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1339,english394,female,usa,english,['none'],"['82,', 'female', '']",0.0,naturalistic,['usa'],82.0,  82
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1340,english395,male,usa,english,['none'],"['39,', 'male', '']",0.0,naturalistic,['usa'],39.0,  39
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1341,english396,female,usa,english,['none'],"['48,', 'female', '']",0.0,naturalistic,['usa'],48.0,  48
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1342,english397,female,usa,english,['none'],"['76,', 'female', '']",0.0,naturalistic,['usa'],76.0,  76
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1343,english398,female,usa,english,['none'],"['83,', 'female', '']",0.0,naturalistic,['usa'],83.0,  83
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1345,english399,female,usa,english,['none'],"['80,', 'female', '']",0.0,naturalistic,['usa'],80.0,  80
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1358,english406,female,usa,english,['none'],"['24,', 'female', '']",0.0,naturalistic,['usa'],24.0,  24
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1361,english408,male,usa,english,"['spanish', '']","['64,', 'male', '']",0.0,naturalistic,['usa'],64.0,  64
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1371,english411,female,usa,english,"['spanish', '']","['26,', 'female', '']",0.0,naturalistic,['usa'],26.0,  26
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1372,english412,female,usa,english,"['german', '']","['31,', 'female', '']",0.0,naturalistic,['usa'],25.0,  31
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1374,english414,female,usa,english,['none'],"['30,', 'female', '']",0.0,naturalistic,['usa'],30.0,  30
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1375,english415,male,usa,english,['none'],"['32,', 'male', '']",0.0,naturalistic,['usa'],32.0,  32
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1385,english419,male,usa,english,"['german', 'gaelic', '']","['27,', 'male', '']",0.0,naturalistic,['usa'],27.0,  27
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1390,english422,male,usa,english,"['spanish', '']","['31,', 'male', '']",0.0,naturalistic,['usa'],31.0,  31
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1395,english423,female,usa,english,"['spanish', 'german', 'italian', '']","['24,', 'female', '']",0.0,naturalistic,['usa'],24.0,  24
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1409,english424,male,usa,english,['none'],"['75,', 'male', '']",0.0,naturalistic,['usa'],75.0,  75
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1410,english425,male,usa,english,['none'],"['31,', 'male', '']",0.0,naturalistic,['usa'],31.0,  31
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1411,english426,female,usa,english,['none'],"['30,', 'female', '']",0.0,naturalistic,['usa'],30.0,  30
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1412,english427,female,usa,english,['none'],"['68,', 'female', '']",0.0,naturalistic,['usa'],68.0,  68
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1413,english428,female,usa,english,['none'],"['55,', 'female', '']",0.0,naturalistic,['usa'],55.0,  55
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1416,english429,female,usa,english,"['german', '']","['19,', 'female', '']",0.0,naturalistic,['usa'],19.0,  19
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1423,english431,female,usa,english,"['german', '']","['23,', 'female', '']",0.0,naturalistic,['usa'],23.0,  23
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1430,english433,female,usa,english,['none'],"['32,', 'female', '']",0.0,naturalistic,['usa'],32.0,  32
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1469,english434,male,usa,english,"['german', '']","['24,', 'male', '']",0.0,naturalistic,['usa'],24.0,  24
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1471,english435,female,usa,english,"['japanese', '']","['20,', 'female', '']",0.0,naturalistic,['usa'],17.0,  20
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1477,english437,male,usa,english,"['french', 'italian', '']","['21,', 'male', '']",0.0,naturalistic,['usa'],21.0,  21
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1492,english438,female,usa,english,['none'],"['20,', 'female', '']",0.0,naturalistic,['usa'],20.0,  20
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1524,english441,female,usa,english,"['french', '']","['19,', 'female', '']",0.0,naturalistic,['usa'],19.0,  19
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1528,english442,male,usa,english,"['french', 'spanish', '']","['23,', 'male', '']",0.0,naturalistic,['usa'],23.0,  23
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1530,english443,male,usa,english,"['french', 'spanish', '']","['31,', 'male', '']",0.0,naturalistic,['usa'],31.0,  31
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1531,english444,male,usa,english,"['spanish', '']","['24,', 'male', '']",0.0,naturalistic,['usa'],24.0,  24
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1532,english445,male,usa,english,"['mandarin', '']","['60,', 'male', '']",0.0,naturalistic,['usa'],59.0,  60
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1533,english446,female,usa,english,['none'],"['23,', 'female', '']",0.0,naturalistic,['usa'],23.0,  23
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1534,english447,male,usa,english,"['french', '']","['21,', 'male', '']",0.0,naturalistic,['usa'],21.0,  21
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1538,english449,male,usa,english,['none'],"['27,', 'male', '']",0.0,naturalistic,['usa'],27.0,  27
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1546,english451,male,usa,english,"['russian', '']","['44,', 'male', '']",0.0,naturalistic,['usa'],44.0,  44
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1548,english453,female,usa,english,"['french', '']","['21,', 'female', '']",0.0,naturalistic,['usa'],21.0,  21
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1550,english454,female,usa,english,"['spanish', '']","['19,', 'female', '']",0.0,naturalistic,['usa'],19.0,  19
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1552,english455,female,usa,english,"['spanish', '']","['29,', 'female', '']",0.0,naturalistic,['usa'],29.0,  29
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1555,english457,male,usa,english,['none'],"['43,', 'male', '']",0.0,naturalistic,['usa'],40.0,  43
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1559,english458,female,usa,english,"['japanese', '']","['22,', 'female', '']",0.0,naturalistic,['usa'],22.0,  22
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1560,english459,male,usa,english,"['french', 'german', '']","['19,', 'male', '']",0.0,naturalistic,['usa'],19.0,  19
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1563,english461,female,usa,english,['none'],"['44,', 'female', '']",0.0,naturalistic,['usa'],44.0,  44
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1564,english462,male,usa,english,"['german', '']","['20,', 'male', '']",0.0,naturalistic,['usa'],20.0,  20
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1571,english463,female,usa,english,"['french', 'spanish', '']","['53,', 'female', '']",0.0,naturalistic,['usa'],53.0,  53
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1637,english466,male,usa,english,['none'],"['18,', 'male', '']",0.0,naturalistic,['usa'],18.0,  18
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1640,english468,male,usa,english,"['german', 'greek,', 'ancient', '']","['30,', 'male', '']",0.0,naturalistic,['usa'],30.0,  30
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1641,english469,male,usa,english,"['japanese', '']","['22,', 'male', '']",0.0,naturalistic,['usa'],21.0,  22
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1656,english474,female,usa,english,"['spanish', '']","['33,', 'female', '']",0.0,naturalistic,['usa'],33.0,  33
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1657,english475,female,usa,english,['none'],"['29,', 'female', '']",0.0,naturalistic,['usa'],29.0,  29
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1658,english476,female,usa,english,['none'],"['64,', 'female', '']",0.0,naturalistic,['usa'],64.0,  64
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1659,english477,female,usa,english,"['german', '']","['31,', 'female', '']",0.0,naturalistic,['usa'],27.0,  31
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1664,english479,female,usa,english,['none'],"['64,', 'female', '']",0.0,naturalistic,['usa'],64.0,  64
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1665,english480,male,usa,english,['none'],"['58,', 'male', '']",0.0,naturalistic,['usa'],58.0,  58
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1666,english481,female,usa,english,"['german', 'spanish', '']","['88,', 'female', '']",0.0,naturalistic,['usa'],82.0,  88
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1667,english482,female,usa,english,['none'],"['74,', 'female', '']",0.0,naturalistic,['usa'],74.0,  74
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1668,english483,male,usa,english,"['spanish', '']","['19,', 'male', '']",0.0,naturalistic,['usa'],19.0,  19
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1674,english485,male,usa,english,"['french', '']","['20,', 'male', '']",0.0,naturalistic,['usa'],20.0,  20
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1716,english492,female,usa,english,"['spanish', 'german', '']","['22,', 'female', '']",0.0,naturalistic,['usa'],22.0,  22
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1718,english493,male,usa,english,"['spanish', 'japanese', '']","['20,', 'male', '']",0.0,naturalistic,['usa'],13.5,  20
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1719,english494,male,usa,english,"['korean', 'japanese', '']","['27.5,', 'male', '']",0.0,naturalistic,['usa'],27.5,  27.5
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1720,english495,male,usa,english,['none'],"['21,', 'male', '']",0.0,naturalistic,['usa'],21.0,  21
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1726,english497,male,usa,english,['none'],"['22,', 'male', '']",0.0,naturalistic,['usa'],22.0,  22
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1728,english499,female,usa,english,"['french', '']","['21,', 'female', '']",0.0,naturalistic,['usa'],21.0,  21
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1734,english501,female,usa,english,['none'],"['64,', 'female', '']",0.0,naturalistic,['usa'],64.0,  64
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1735,english502,female,usa,english,['none'],"['30,', 'female', '']",0.0,naturalistic,['usa'],30.0,  30
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1786,english504,male,usa,english,"['japanese', '']","['25,', 'male', '']",0.0,naturalistic,['usa'],25.0,  25
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1799,english506,female,usa,english,"['french', 'mandarin', '']","['30,', 'female', '']",0.0,naturalistic,['usa'],30.0,  30
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1801,english508,female,usa,english,"['spanish', '']","['20,', 'female', '']",0.0,naturalistic,['usa'],20.0,  20
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1802,english509,female,usa,english,"['spanish', '']","['44,', 'female', '']",0.0,naturalistic,['usa'],35.0,  44
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1803,english510,female,usa,english,"['french', '']","['66,', 'female', '']",0.0,naturalistic,['usa'],66.0,  66
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1818,english511,female,usa,english,"['german', '']","['31,', 'female', '']",0.0,naturalistic,['usa'],31.0,  31
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1819,english512,female,usa,english,['none'],"['54,', 'female', '']",0.0,naturalistic,['usa'],54.0,  54
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1872,english514,male,usa,english,['none'],"['57,', 'male', '']",0.0,naturalistic,['usa'],57.0,  57
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1873,english515,female,usa,english,['none'],"['55,', 'female', '']",0.0,naturalistic,['usa'],55.0,  55
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1875,english516,female,usa,english,"['french', 'japanese', 'mandarin', 'german', '']","['32,', 'female', '']",0.0,naturalistic,['usa'],32.0,  32
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1876,english517,male,usa,english,"['spanish', '']","['33,', 'male', '']",0.0,naturalistic,['usa'],33.0,  33
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1884,english520,female,usa,english,"['mandarin', 'spanish', '']","['47,', 'female', '']",0.0,naturalistic,['usa'],47.0,  47
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1886,english521,female,usa,english,"['spanish', '']","['25,', 'female', '']",0.0,naturalistic,['usa'],25.0,  25
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1887,english522,female,usa,english,['none'],"['22,', 'female', '']",0.0,naturalistic,['usa'],22.0,  22
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1888,english523,female,usa,english,"['arabic', 'french', '']","['18,', 'female', '']",0.0,naturalistic,['usa'],18.0,  18
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1890,english524,male,usa,english,['none'],"['19,', 'male', '']",0.0,naturalistic,['usa'],19.0,  19
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1893,english525,female,usa,english,['none'],"['18,', 'female', '']",0.0,naturalistic,['usa'],18.0,  18
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1895,english526,male,usa,english,['none'],"['20,', 'male', '']",0.0,naturalistic,['usa'],20.0,  20
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1907,english527,female,usa,english,"['italian', '']","['25,', 'female', '']",0.0,naturalistic,['usa'],25.0,  25
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1908,english528,female,usa,english,"['arabic', 'farsi', 'swahili', 'spanish', '']","['52,', 'female', '']",0.0,naturalistic,['usa'],52.0,  52
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1925,english529,female,usa,english,"['french', 'spanish', '']","['29,', 'female', '']",0.0,naturalistic,['usa'],29.0,  29
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1926,english530,female,usa,english,"['german', '']","['50,', 'female', '']",0.0,naturalistic,['usa'],35.0,  50
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1928,english531,female,usa,english,"['japanese', 'french', 'german', '']","['29,', 'female', '']",0.0,naturalistic,['usa'],26.0,  29
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1933,english532,female,usa,english,['none'],"['23,', 'female', '']",0.0,naturalistic,['usa'],23.0,  23
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1934,english533,female,usa,english,"['spanish', '']","['38,', 'female', '']",0.0,naturalistic,['usa'],38.0,  38
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1951,english534,female,usa,english,['none'],"['29,', 'female', '']",0.0,naturalistic,['usa'],29.0,  29
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1955,english535,female,usa,english,['none'],"['22,', 'female', '']",0.0,naturalistic,['usa'],22.0,  22
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1956,english536,female,usa,english,"['hebrew', 'spanish', '']","['21,', 'female', '']",0.0,naturalistic,['usa'],21.0,  21
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1957,english537,female,usa,english,"['spanish', '']","['21,', 'female', '']",0.0,naturalistic,['usa'],21.0,  21
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1958,english538,female,usa,english,"['french', 'american', 'sign', 'language', '']","['20,', 'female', '']",0.0,naturalistic,['usa'],20.0,  20
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1959,english539,female,usa,english,['none'],"['19,', 'female', '']",0.0,naturalistic,['usa'],19.0,  19
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1960,english540,female,usa,english,"['japanese', '']","['18,', 'female', '']",0.0,naturalistic,['usa'],18.0,  18
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1961,english541,female,usa,english,['none'],"['27,', 'female', '']",0.0,naturalistic,['usa'],27.0,  27
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1970,english544,male,usa,english,"['spanish', '']","['31,', 'male', '']",0.0,naturalistic,['usa'],31.0,  31
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1995,english545,male,usa,english,['none'],"['56,', 'male', '']",0.0,naturalistic,['usa'],56.0,  56
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1996,english546,female,usa,english,['none'],"['43,', 'female', '']",0.0,naturalistic,['usa'],43.0,  43
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=1997,english547,male,usa,english,['none'],"['63,', 'male', '']",0.0,naturalistic,['usa'],63.0,  63
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2028,english550,male,usa,english,['none'],"['82,', 'male', '']",0.0,naturalistic,['usa'],82.0,  82
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2029,english551,female,usa,english,['none'],"['81,', 'female', '']",0.0,naturalistic,['usa'],81.0,  81
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2043,english552,female,usa,english,"['french', 'italian', '']","['23,', 'female', '']",0.0,naturalistic,['USA'],20.0,  23
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2046,english553,male,usa,english,"['spanish', '']","['21,', 'male', '']",0.0,naturalistic,['usa'],21.0,  21
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2047,english554,female,usa,english,"['spanish', '']","['22,', 'female', '']",0.0,naturalistic,['usa'],22.0,  22
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2049,english555,male,usa,english,"['yiddish', 'spanish', '']","['90,', 'male', '']",0.0,naturalistic,['usa'],90.0,  90
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2050,english556,female,usa,english,"['yiddish', '']","['84,', 'female', '']",0.0,naturalistic,['usa'],84.0,  84
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2055,english558,male,usa,english,['none'],"['23,', 'male', '']",0.0,naturalistic,['usa'],23.0,  23
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2056,english559,female,usa,english,"['spanish', '']","['19,', 'female', '']",0.0,naturalistic,['usa'],19.0,  19
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2059,english560,female,usa,english,"['spanish', '']","['22,', 'female', '']",0.0,naturalistic,['usa'],22.0,  22
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2060,english561,female,usa,english,"['spanish', '']","['20,', 'female', '']",0.0,naturalistic,['usa'],20.0,  20
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2061,english562,female,usa,english,"['german', 'french', '']","['30,', 'female', '']",0.0,naturalistic,['usa'],30.0,  30
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2074,english563,male,usa,english,['none'],"['32,', 'male', '']",0.0,naturalistic,['usa'],32.0,  32
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2077,english564,male,usa,english,['none'],"['52,', 'male', '']",0.0,naturalistic,['usa'],52.0,  52
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2080,english565,female,usa,english,"['german', '']","['27,', 'female', '']",0.0,naturalistic,['usa'],27.0,  27
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2101,english567,male,usa,english,"['spanish', 'french', 'japanese', '']","['24,', 'male', '']",0.0,naturalistic,['usa'],24.0,  24
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2103,english568,female,usa,english,['none'],"['86,', 'female', '']",0.0,naturalistic,['usa'],86.0,  86
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2106,english570,female,usa,english,"['spanish', 'russian', '']","['42,', 'female', '']",0.0,naturalistic,['usa'],42.0,  42
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2113,english571,male,usa,english,"['korean', '']","['39,', 'male', '']",0.0,naturalistic,['usa'],39.0,  39
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2121,english572,male,usa,english,"['german', 'azerbaijani', 'french', '']","['51,', 'male', '']",0.0,naturalistic,"['usa,', 'uk']",48.0,  51
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2124,english573,male,usa,english,"['german', 'french', 'italian', 'spanish', 'mandarin', '']","['46,', 'male', '']",0.0,naturalistic,['usa'],46.0,  46
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2165,english575,male,usa,english,"['japanese', '']","['24,', 'male', '']",0.0,naturalistic,['usa'],24.0,  24
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2167,english576,female,usa,english,"['french', 'italian', '']","['63,', 'female', '']",0.0,naturalistic,['usa'],63.0,  63
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2170,english577,female,usa,english,['none'],"['38,', 'female', '']",0.0,naturalistic,['usa'],38.0,  38
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2185,english580,male,usa,english,"['japanese', '']","['21,', 'male', '']",0.0,naturalistic,['usa'],21.0,  21
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2197,english584,male,usa,english,['none'],"['27,', 'male', '']",0.0,naturalistic,['usa'],27.0,  27
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2207,english585,female,usa,english,"['spanish', '']","['26,', 'female', '']",0.0,naturalistic,['usa'],26.0,  26
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2221,english586,female,usa,english,"['spanish', '']","['21,', 'female', '']",0.0,naturalistic,['usa'],21.0,  21
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2225,english587,female,usa,english,"['spanish', '']","['27,', 'female', '']",0.0,naturalisstic,['usa'],27.0,  27
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2361,english588,female,usa,english,"['urdu', 'french', '']","['21,', 'female', '']",0.0,naturalistic,['usa'],21.0,  21
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2374,english590,female,usa,english,['none'],"['19,', 'female', '']",0.0,naturalistic,['usa'],19.0,  19
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2375,english591,female,usa,english,['none'],"['20,', 'female', '']",0.0,naturalistic,['usa'],20.0,  20
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2376,english592,female,usa,english,['none'],"['29,', 'female', '']",0.0,naturalistic,['usa'],29.0,  29
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2377,english593,female,usa,english,"['spanish', 'french', '']","['24,', 'female', '']",0.0,naturalistic,['usa'],24.0,  24
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2378,english594,female,usa,english,"['french', 'german', 'mandarin', '']","['20,', 'female', '']",0.0,naturalistic,['usa'],20.0,  20
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2379,english595,female,usa,english,"['spanish', '']","['21,', 'female', '']",0.0,naturalistic,['usa'],21.0,  21
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2380,english596,female,usa,english,"['spanish', 'french', '']","['22,', 'female', '']",0.0,naturalistic,['usa'],22.0,  22
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2381,english597,male,usa,english,"['spanish', '']","['26,', 'male', '']",0.0,naturalistic,['usa'],26.0,  26
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2382,english598,male,usa,english,"['spanish', 'french', '']","['29,', 'male', '']",0.0,naturalistic,['usa'],29.0,  29
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2383,english599,female,usa,english,"['urdu', 'punjabi', '']","['20,', 'female', '']",1.0,naturalistic,['usa'],20.0,  20
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2385,english600,female,usa,english,['none'],"['32,', 'female', '']",0.0,naturalistic,['usa'],28.0,  32
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2404,english601,male,usa,english,['none'],"['49,', 'male', '']",0.0,naturalistic,['usa'],49.0,  49
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2405,english602,female,usa,english,['none'],"['41,', 'female', '']",0.0,naturalistic,['usa'],41.0,  41
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2428,english603,male,usa,english,"['mandarin', 'taiwanese', '']","['18,', 'male', '']",0.0,naturalistic,['usa'],18.0,  18
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2606,english614,female,usa,english,['none'],"['93,', 'female', '']",0.0,naturalistic,['usa'],93.0,  93
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2619,english616,male,usa,english,"['german', '']","['23,', 'male', '']",0.0,naturalistic,['usa'],23.0,  23
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2674,english618,male,usa,english,"['swedish', 'spanish', 'french', 'hebrew', '']","['58,', 'male', '']",0.0,naturalistic,['usa'],36.0,  58
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2724,english619,male,usa,english,['none'],"['21,', 'male', '']",0.0,naturalistic,['usa'],21.0,  21
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2793,english621,female,usa,english,"['french', '']","['19,', 'female', '']",0.0,naturalistic,['usa'],19.0,  19
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2799,english622,female,usa,english,"['arabic', 'french', '']","['21,', 'female', '']",0.0,naturalistic,['usa'],21.0,  21
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2803,english623,male,usa,english,"['german', '']","['19,', 'male', '']",0.0,naturalistic,['usa'],19.0,  19
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2804,english624,male,usa,english,['none'],"['18,', 'male', '']",0.0,naturalistic,['usa'],18.0,  18
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2805,english625,male,usa,english,"['japanese', 'asl', 'japanese', 'sign', 'language', '']","['20,', 'male', '']",0.0,naturalistic,['usa'],20.0,  20
+http://accent.gmu.edu/browse_language.php?function=detail&speakerid=2806,english626,female,usa,english,"['german', 'arabic', '']","['21,', 'female', '']",0.0,naturalistic,['usa'],21.0,  21
