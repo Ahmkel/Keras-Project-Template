@@ -27,6 +27,6 @@ if __name__ == '__main__':
     dataset_with_all_english_speakers(input_file="../" + AccentDataLoader.csv_path("all_english_speakers.csv"),
                                       download=True,)
 
-    # dataset_with_only_usa_natives(input_file="../" + AccentDataLoader.csv_path("only_usa_native_speakers.csv"),
+    # dataset_with_only_usa_natives(input_file="../" + AccentDataLoader.csv_path("usa_english_speakers.csv"),
     #                               download=False)
 

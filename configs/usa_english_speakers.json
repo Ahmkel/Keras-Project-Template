@@ -1,6 +1,6 @@
 {
   "exp": {
-    "name": "only_usa_native_speakers"
+    "name": "usa_english_speakers"
   },
   "data_loader": {
     "name": "accent_data_loader.AccentDataLoader",
