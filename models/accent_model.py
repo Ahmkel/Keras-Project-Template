@@ -31,3 +31,4 @@ class AccentModel(BaseModel):
         self.model.compile(loss='categorical_crossentropy',
                            optimizer='adadelta',
                            metrics=['accuracy'])
+

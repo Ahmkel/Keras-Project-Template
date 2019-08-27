@@ -1,3 +1,5 @@
+import os
+
 from comet_ml import Experiment
 
 from utils.config import process_config
@@ -32,6 +34,9 @@ def main():
 
         print('Start training the model.')
         trainer.train()
+
+        trainer.save_model()
+
 
     except Exception as e:
         print(e)

@@ -1,3 +1,5 @@
+import pathlib
+
 import pandas as pd
 import urllib.request
 import os
@@ -11,7 +13,7 @@ from pydub import AudioSegment
 
 class AudioDownloader:
 
-    def __init__(self, csv_filepath, destination_folder='../audio/', wait=1.5, debug=False):
+    def __init__(self, csv_filepath, destination_folder='../datasets/audio/', wait=1.5, debug=False):
         '''
         Initializes GetAudio class object
         :param destination_folder (str): Folder where audio files will be saved
@@ -29,13 +31,7 @@ class AudioDownloader:
         '''
         Checks if self.distination_folder exists. If not, a folder called self.destination_folder is created
         '''
-        path_to_script = os.path.realpath(__file__)
-        parent_directory = os.path.dirname(path_to_script)
-        audio_folder = os.path.join(parent_directory, self.destination_folder)
-        if not os.path.isdir(audio_folder):
-            if self.debug:
-                print('{} does not exist, creating'.format(self.destination_folder))
-            os.makedirs('../' + self.destination_folder)
+        pathlib.Path(self.destination_folder).mkdir(parents=True, exist_ok=True)
 
     def download(self, url, output_file):
 
@@ -43,7 +39,9 @@ class AudioDownloader:
             print('downloading {}'.format(output_file))
         (filename, headers) = urllib.request.urlretrieve(url)
         sound = AudioSegment.from_mp3(filename)
-        sound.export(self.destination_folder + "{}.wav".format(output_file), format="wav")
+
+        sound_file_path = os.path.join(self.destination_folder, "{}.wav".format(output_file))
+        sound.export(sound_file_path, format="wav")
 
     def get_audio(self):
         '''

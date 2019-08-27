@@ -110,6 +110,6 @@ ENV/
 experiments/
 
 #datasets
-datasets/
+datasets/audio/
 
 .idea/

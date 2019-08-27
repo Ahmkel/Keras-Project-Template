@@ -1,8 +1,12 @@
+import json
+import pathlib
+import shutil
+
 from keras_preprocessing.image import ImageDataGenerator
 
 from base.base_trainer import BaseTrain
 import os
-from keras.callbacks import ModelCheckpoint, TensorBoard, EarlyStopping
+from keras.callbacks import ModelCheckpoint, EarlyStopping
 
 
 class AccentTrainer(BaseTrain):
@@ -20,6 +24,7 @@ class AccentTrainer(BaseTrain):
         self.acc = []
         self.val_loss = []
         self.val_acc = []
+        self.experiment_id = ""
         self.init_callbacks()
 
     def init_callbacks(self):
@@ -28,12 +33,12 @@ class AccentTrainer(BaseTrain):
             EarlyStopping(monitor='acc', min_delta=.005, patience=10, verbose=1, mode='auto')
         )
 
-        self.callbacks.append(
-                TensorBoard(
-                    log_dir=self.config.callbacks.tensorboard_log_dir,
-                    write_graph=self.config.callbacks.tensorboard_write_graph,
-                )
-        )
+        # self.callbacks.append(
+        #         TensorBoard(
+        #             log_dir=self.config.callbacks.tensorboard_log_dir,
+        #             write_graph=self.config.callbacks.tensorboard_write_graph,
+        #         )
+        # )
 
         self.callbacks.append(
             ModelCheckpoint(
@@ -69,6 +74,7 @@ class AccentTrainer(BaseTrain):
                                     project_name=self.config.api.comet.exp_name)
             experiment.disable_mp()
             experiment.log_parameters(self.config)
+            self.experiment_id = experiment.id
             self.callbacks.append(experiment.get_callback('keras'))
 
     def train(self):
@@ -97,3 +103,36 @@ class AccentTrainer(BaseTrain):
         self.acc.extend(history.history['acc'])
         self.val_loss.extend(history.history['val_loss'])
         self.val_acc.extend(history.history['val_acc'])
+
+    def save_model(self):
+
+        if not self.experiment_id:
+            import datetime
+            self.experiment_id = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+
+        model_type_path = os.path.join("saved_models", self.config.exp.name, self.experiment_id)
+
+        pathlib.Path(model_type_path).mkdir(parents=True, exist_ok=True)
+
+        name = "model.h5"
+        model_path = os.path.join(model_type_path, name)
+        self.model.save(model_path)
+
+        self.copy_context()
+
+    def copy_context(self):
+        model_type_path = os.path.join("saved_models", self.config.exp.name, self.experiment_id)
+
+        pathlib.Path(model_type_path).mkdir(parents=True, exist_ok=True)
+
+        # copying CSV file
+        csv_name = self.config.data_loader.data_file
+        path_from = os.path.join("datasets/training_files", csv_name)
+        path_to = os.path.join(model_type_path, csv_name)
+        shutil.copy(path_from, path_to)
+
+        # dumping the config
+        json_config = json.dumps(self.config.toDict(), indent=4)
+        path_to = os.path.join(model_type_path, "config.json")
+        with open(path_to, "w") as f:
+            f.write(json_config)

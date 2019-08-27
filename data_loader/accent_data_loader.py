@@ -46,6 +46,15 @@ class AccentDataLoader(BaseDataLoader):
     def __init__(self, config):
         super(AccentDataLoader, self).__init__(config)
 
+        self.X_train = []
+        self.y_train = []
+        self.X_validation = []
+        self.y_validation = []
+
+        self.init_model()
+
+    def init_model(self):
+
         # Load metadata
         df = pd.read_csv(self._csv_path())
         # Filter metadata to retrieve only files desired
