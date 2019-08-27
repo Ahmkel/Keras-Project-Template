@@ -1,4 +1,5 @@
 import multiprocessing
+import os
 from collections import defaultdict
 
 import numpy as np
@@ -14,11 +15,39 @@ from tqdm import tqdm
 
 class AccentDataLoader(BaseDataLoader):
 
+    DATASET_DIR = "datasets"
+    TRAINING_FILES_DIR = "training_files"
+    AUDIO_FILES_DIR = "audio"
+
+    AUDIO_PATH = os.path.join(DATASET_DIR, AUDIO_FILES_DIR)
+
+    @staticmethod
+    def csv_path(file_name):
+
+        return os.path.join(AccentDataLoader.DATASET_DIR,
+                            AccentDataLoader.TRAINING_FILES_DIR,
+                            file_name)
+
+    def _csv_path(self):
+
+        return self.csv_path(self.config.data_loader.data_file)
+
+    @staticmethod
+    def _audio_path(name):
+        return os.path.join(AccentDataLoader.DATASET_DIR,
+                            AccentDataLoader.AUDIO_FILES_DIR,
+                            "{}.wav".format(name))
+
+    @staticmethod
+    def preproccess_data(X):
+        return Parallel(n_jobs=multiprocessing.cpu_count(), backend='multiprocessing')(
+                           delayed(process_sound_file)(file_path=AccentDataLoader._audio_path(name)) for name in tqdm(X))
+
     def __init__(self, config):
         super(AccentDataLoader, self).__init__(config)
 
         # Load metadata
-        df = pd.read_csv("data_loader/bio_data.csv")
+        df = pd.read_csv(self._csv_path())
         # Filter metadata to retrieve only files desired
         filtered_df = filter_df(df)
 
@@ -32,11 +61,8 @@ class AccentDataLoader(BaseDataLoader):
         if config.debug:
             print('Loading wav files....')
 
-        X_train = Parallel(n_jobs=multiprocessing.cpu_count(), backend='multiprocessing')(
-                           delayed(process_sound_file)(name=name) for name in tqdm(X_train))
-
-        X_test = Parallel(n_jobs=multiprocessing.cpu_count(), backend='multiprocessing')(
-                           delayed(process_sound_file)(name=name) for name in tqdm(X_test))
+        X_train = self.preproccess_data(X_train)
+        X_test = self.preproccess_data(X_test)
 
         # Create segments from MFCCs
         X_train, y_train = SoundUtils.make_segments(X_train, y_train)

@@ -1,9 +1,13 @@
+import os
+
 import requests
 import pandas as pd
 from bs4 import BeautifulSoup
 import time
 import sys
 import re
+
+from data_loader.accent_data_loader import AccentDataLoader
 
 ROOT_URL = 'http://accent.gmu.edu/'
 BROWSE_LANGUAGE_URL = 'browse_language.php?function=find&language={}'
@@ -113,7 +117,8 @@ def create_dataframe(languages):
     df['english_residence'] = bio_rows.iloc[:, 6]
     df['length_of_english_residence'] = bio_rows.iloc[:, 7]
 
-    df['birth_place'] = df['birth_place'].apply(lambda x: x[:-6].split(' ')[-2:])
+    # df['birth_place'] = df['birth_place'].apply(lambda x: x[:-6].split(' ')[-2:])
+    df['birth_place'] = df['birth_place'].apply(lambda x: x[:-6].split(',')[-2:][1].strip())
     # print(df['birth_place'])
     # df['birth_place'] = lambda x: x[:-6].split(' ')[2:], df['birth_place']
     df['native_language'] = df['native_language'].apply(lambda x: x.split(' ')[2])
@@ -141,35 +146,69 @@ def create_dataframe(languages):
 
     # df['age'] = lambda x: x.replace(' ','').split(',')[0], df['age_sex']
 
-    return (df)
+    return df
 
 
-if __name__ == '__main__':
-    '''
-    console command example:
-    python fromwebsite.py bio_metadata.csv mandarin english arabic
-    '''
+def scrape(destination_file,
+           languages,
+           only_usa=False,
+           download=True,
+           input_file=""):
 
-    df = None
+    output_file = "../" + AccentDataLoader.csv_path(destination_file)
 
-    # Set destination file
-    destination_file = sys.argv[1]
+    # dont download, read data from an input file to filter
+    if input_file:
+        df = pd.read_csv(input_file)
 
-    # If no language arguments, use 'mandarin' as default
-    try:
-        languages = sys.argv[2:]
-    except:
-        languages = ['mandarin']
-        pass
-
-    # Check if destination file exists, else create a new one
-    try:
-        df = pd.read_csv(destination_file)
-        df = df.append(create_dataframe(languages=languages), ignore_index=True)
-
-    except:
-        df = create_dataframe(languages=languages)
+    else:
+        # Check if destination file exists, else create a new one
+        try:
+            df = pd.read_csv(output_file)
+            if download:
+                df = df.append(create_dataframe(languages=languages), ignore_index=True)
+        except:
+            if download:
+                df = create_dataframe(languages=languages)
+            else:
+                print("Couldn't read input csv file")
+                sys.exit(0)
 
     df.drop_duplicates(subset='language_num', inplace=True)
 
-    df.to_csv(destination_file, index=False)
+    if only_usa:
+    #     df.reset_index(inplace=True)
+        df.drop(df[(df.native_language == "english") & (df.birth_place != "usa")].index, inplace=True)
+
+    df.to_csv(output_file, index=False)
+
+
+# if __name__ == '__main__':
+#     '''
+#     console command example:
+#     python fromwebsite.py bio_metadata.csv mandarin english arabic
+#     '''
+#
+#     df = None
+#
+#     # Set destination file
+#     destination_file = sys.argv[1]
+#
+#     # If no language arguments, use 'mandarin' as default
+#     try:
+#         languages = sys.argv[2:]
+#     except:
+#         languages = ['mandarin']
+#         pass
+#
+#     # Check if destination file exists, else create a new one
+#     try:
+#         df = pd.read_csv(destination_file)
+#         df = df.append(create_dataframe(languages=languages), ignore_index=True)
+#
+#     except:
+#         df = create_dataframe(languages=languages)
+#
+#     df.drop_duplicates(subset='language_num', inplace=True)
+#
+#     df.to_csv(destination_file, index=False)

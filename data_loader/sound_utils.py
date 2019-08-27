@@ -9,14 +9,14 @@ COL_SIZE = 30
 EPOCHS = 10  # 35#250
 
 
-def get_wav(language_num):
+def get_wav(file_path):
     '''
     Load wav file from disk and down-samples to RATE
     :param language_num (list): list of file names
     :return (numpy array): Down-sampled wav file
     '''
 
-    y, sr = librosa.load('audio/{}.wav'.format(language_num))
+    y, sr = librosa.load(file_path)
     return librosa.core.resample(y=y, orig_sr=sr, target_sr=RATE, scale=True)
 
 
@@ -32,13 +32,13 @@ def to_mfcc(wav):
     return mfcc
 
 
-def process_sound_file(name):
+def process_sound_file(file_path):
     """
     process a sound file - reading a wav and converting it to mfcc
     :param file_name:
     :return:
     """
-    return to_mfcc(get_wav(name))
+    return to_mfcc(get_wav(file_path))
 
 
 class SoundUtils:

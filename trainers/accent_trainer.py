@@ -12,9 +12,9 @@ class AccentTrainer(BaseTrain):
                  validation_data,
                  config):
         super(AccentTrainer, self).__init__(model,
-                                                training_data,
-                                                validation_data,
-                                                config)
+                                            training_data,
+                                            validation_data,
+                                            config)
         self.callbacks = []
         self.loss = []
         self.acc = []
@@ -62,14 +62,14 @@ class AccentTrainer(BaseTrain):
         #                  write_images=True, embeddings_freq=0, embeddings_layer_names=None,
         #                  embeddings_metadata=None)
 
-        # # log experiments to comet.ml
-        # if hasattr(self.config.api, "comet"):
-        #     from comet_ml import Experiment
-        #     experiment = Experiment(api_key=self.config.api.comet.api_key,
-        #                             project_name=self.config.api.comet.exp_name)
-        #     experiment.disable_mp()
-        #     experiment.log_parameters(self.config)
-        #     self.callbacks.append(experiment.get_callback('keras'))
+        # log experiments to comet.ml
+        if hasattr(self.config.api, "comet"):
+            from comet_ml import Experiment
+            experiment = Experiment(api_key=self.config.api.comet.api_key,
+                                    project_name=self.config.api.comet.exp_name)
+            experiment.disable_mp()
+            experiment.log_parameters(self.config)
+            self.callbacks.append(experiment.get_callback('keras'))
 
     def train(self):
 
@@ -80,16 +80,12 @@ class AccentTrainer(BaseTrain):
         # steps per epoch is the number of rounds the generator goes within one epoch
         steps_per_epoch = len(self.training_data[0]) / self.config.trainer.batch_size
 
-        # fit_generator(generator, steps_per_epoch=None, epochs=1, verbose=1, callbacks=None, validation_data=None,
-        #               validation_steps=None, validation_freq=1, class_weight=None, max_queue_size=10, workers=1,
-        #               use_multiprocessing=False, shuffle=True, initial_epoch=0)
-
         # using a generator to load the data
         history = self.model.fit_generator(
-            # datagen.flow(self.training_data[0], self.training_data[1],
-            #              batch_size=self.config.trainer.batch_size),
+            datagen.flow(self.training_data[0], self.training_data[1],
+                         batch_size=self.config.trainer.batch_size),
             # self.training_data,
-            batch_size=self.config.trainer.batch_size,
+            # batch_size=self.config.trainer.batch_size,
             epochs=self.config.trainer.num_epochs,
             steps_per_epoch=steps_per_epoch,
             verbose=self.config.trainer.verbose_training,

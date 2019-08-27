@@ -1,6 +1,5 @@
 from comet_ml import Experiment
 
-from data_loader.sound_data_generator import DataGenerator
 from utils.config import process_config
 from utils.dirs import create_dirs
 from utils.args import get_args
@@ -37,6 +36,7 @@ def main():
     except Exception as e:
         print(e)
         sys.exit(1)
+
 
 if __name__ == '__main__':
     main()
