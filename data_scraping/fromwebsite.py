@@ -1,5 +1,6 @@
 import os
 
+import numpy as np
 import requests
 import pandas as pd
 from bs4 import BeautifulSoup
@@ -177,8 +178,21 @@ def scrape(destination_file,
 
     df.drop_duplicates(subset='language_num', inplace=True)
 
+    # make all non-english natives to a different type
+    df.loc[(df.native_language != "english"), 'new_native_language'] = "other"
+    df.loc[(df.native_language == "english"), 'new_native_language'] = "english"
+
     if only_usa:
         df.drop(df[(df.native_language == "english") & (df.birth_place != "usa")].index, inplace=True)
+    else:
+        # we convert all the non USA people to "other"
+        df.loc[(df.native_language == "english") & (df.birth_place != "usa"), 'new_native_language'] = "other"
+
+    # remove other language
+    df.drop(df[(df.native_language == "russian")].index, inplace=True)
+    df.drop(df[(df.native_language == "amharic")].index, inplace=True)
+    df.drop(df[(df.native_language == "hebrew")].index, inplace=True)
+
 
     # Filter metadata to retrieve only files desired
     df.drop(df[(df.length_of_english_residence > 10) & (df.native_language != "english")].index, inplace=True)

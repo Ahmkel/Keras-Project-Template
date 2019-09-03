@@ -10,7 +10,7 @@ def split_people(df, test_size=0.2):
     :return X_train, X_test, y_train, y_test (tuple): Xs are list of df['language_num'] and Ys are df['native_language']
     '''
 
-    return train_test_split(df['language_num'], df['native_language'], test_size=test_size, random_state=1234)
+    return train_test_split(df['language_num'], df['new_native_language'], test_size=test_size, random_state=1234)
 
 
 def to_categorical(y):
