@@ -10,7 +10,11 @@ def split_people(df, test_size=0.2):
     :return X_train, X_test, y_train, y_test (tuple): Xs are list of df['language_num'] and Ys are df['native_language']
     '''
 
-    return train_test_split(df['language_num'], df['new_native_language'], test_size=test_size, random_state=1234)
+    return train_test_split(df['language_num'],
+                            df['new_native_language'],
+                            test_size=test_size,
+                            stratify=df['new_native_language'],
+                            random_state=1234)
 
 
 def to_categorical(y):
@@ -38,18 +42,3 @@ def find_classes(y):
         lang_dict[language] = index
 
     return lang_dict
-
-
-def create_labels(y, classes):
-    pass
-
-# if __name__ == '__main__':
-#     '''
-#     Console command example:
-#     python bio_data.csv
-#     '''
-#
-#     csv_file = sys.argv[1]
-#     df = pd.read_csv(csv_file)
-#     filtered_df = filter_df(df)
-#     print(split_people(filtered_df))
