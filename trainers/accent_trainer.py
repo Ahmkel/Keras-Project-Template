@@ -29,9 +29,9 @@ class AccentTrainer(BaseTrain):
 
     def init_callbacks(self):
         # Stops training if accuracy does not change at least 0.005 over 10 epochs
-        # self.callbacks.append(
-        #     EarlyStopping(monitor='acc', min_delta=.005, patience=10, verbose=1, mode='auto')
-        # )
+        self.callbacks.append(
+            EarlyStopping(monitor='acc', min_delta=.005, patience=10, verbose=1, mode='auto')
+        )
 
         # self.callbacks.append(
         #         TensorBoard(

@@ -2,32 +2,6 @@ from sklearn.model_selection import train_test_split
 from keras import utils
 
 
-def filter_df(df):
-    '''
-    Function to filter audio files based on df columns
-    df column options: [age,age_of_english_onset,age_sex,birth_place,english_learning_method,
-    english_residence,length_of_english_residence,native_language,other_languages,sex]
-    :param df (DataFrame): Full unfiltered DataFrame
-    :return (DataFrame): Filtered DataFrame
-    '''
-
-    arabic = df[df.native_language == 'arabic']
-    mandarin = df[df.native_language == 'mandarin']
-    english = df[df.native_language == 'english']
-    russian = df[df.native_language == 'english']
-    amharic = df[df.native_language == 'english']
-    french = df[df.native_language == 'english']
-
-    mandarin = mandarin[mandarin.length_of_english_residence < 10]
-    arabic = arabic[arabic.length_of_english_residence < 10]
-
-    df = df.append(english)
-    df = df.append(arabic)
-    df = df.append(mandarin)
-
-    return df
-
-
 def split_people(df, test_size=0.2):
     '''
     Create train test split of DataFrame

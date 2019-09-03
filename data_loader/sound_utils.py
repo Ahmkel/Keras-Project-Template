@@ -1,3 +1,5 @@
+import io
+
 import librosa
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler
@@ -36,7 +38,7 @@ def to_mfcc(wav):
 
 
 @np_cache
-def process_sound_file(file_path, mfcc_dir='datasets/audio/mfcc'):
+def process_sound_file(file_path):
     """
     process a sound file - reading a wav and converting it to mfcc
     :param file_name:
@@ -48,6 +50,14 @@ def process_sound_file(file_path, mfcc_dir='datasets/audio/mfcc'):
 
 class SoundUtils:
 
+    @staticmethod
+    def segment_request_file(request_file):
+        y, sr = librosa.load(request_file)
+        wav = librosa.core.resample(y=y, orig_sr=sr, target_sr=RATE, scale=True)
+        mfcc = to_mfcc(wav)
+        segments = SoundUtils.segment_one(mfcc)
+
+        return segments
 
     @staticmethod
     def remove_silence(wav, thresh=0.04, chunk=5000):

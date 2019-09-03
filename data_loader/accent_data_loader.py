@@ -56,7 +56,8 @@ class AccentDataLoader(BaseDataLoader):
 
         # Load metadata
         filtered_df = pd.read_csv(self._csv_path())
-
+        # Shuffle the data frame
+        filtered_df = filtered_df.sample(frac=1).reset_index(drop=True)
         # Train test split
         X_train, X_test, y_train, y_test = split_people(filtered_df)
 
