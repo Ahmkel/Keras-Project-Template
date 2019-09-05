@@ -1,6 +1,4 @@
-import os
 
-import numpy as np
 import requests
 import pandas as pd
 from bs4 import BeautifulSoup
@@ -198,34 +196,3 @@ def scrape(destination_file,
     df.drop(df[(df.length_of_english_residence > 10) & (df.native_language != "english")].index, inplace=True)
 
     df.to_csv(output_file, index=False)
-
-
-# if __name__ == '__main__':
-#     '''
-#     console command example:
-#     python fromwebsite.py bio_metadata.csv mandarin english arabic
-#     '''
-#
-#     df = None
-#
-#     # Set destination file
-#     destination_file = sys.argv[1]
-#
-#     # If no language arguments, use 'mandarin' as default
-#     try:
-#         languages = sys.argv[2:]
-#     except:
-#         languages = ['mandarin']
-#         pass
-#
-#     # Check if destination file exists, else create a new one
-#     try:
-#         df = pd.read_csv(destination_file)
-#         df = df.append(create_dataframe(languages=languages), ignore_index=True)
-#
-#     except:
-#         df = create_dataframe(languages=languages)
-#
-#     df.drop_duplicates(subset='language_num', inplace=True)
-#
-#     df.to_csv(destination_file, index=False)

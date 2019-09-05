@@ -10,7 +10,6 @@ from pydub import AudioSegment
 
 # from constants import DEBUG
 
-
 class AudioDownloader:
 
     def __init__(self, csv_filepath, destination_folder='../datasets/audio/', wait=1.5, debug=False):

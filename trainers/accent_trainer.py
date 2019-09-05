@@ -6,7 +6,7 @@ from keras_preprocessing.image import ImageDataGenerator
 
 from base.base_trainer import BaseTrain
 import os
-from keras.callbacks import ModelCheckpoint, EarlyStopping
+from keras.callbacks import ModelCheckpoint, EarlyStopping, TensorBoard
 
 
 class AccentTrainer(BaseTrain):
@@ -33,12 +33,12 @@ class AccentTrainer(BaseTrain):
             EarlyStopping(monitor='acc', min_delta=.005, patience=10, verbose=1, mode='auto')
         )
 
-        # self.callbacks.append(
-        #         TensorBoard(
-        #             log_dir=self.config.callbacks.tensorboard_log_dir,
-        #             write_graph=self.config.callbacks.tensorboard_write_graph,
-        #         )
-        # )
+        self.callbacks.append(
+                TensorBoard(
+                    log_dir=self.config.callbacks.tensorboard_log_dir,
+                    write_graph=self.config.callbacks.tensorboard_write_graph,
+                )
+        )
 
         self.callbacks.append(
             ModelCheckpoint(
@@ -50,22 +50,6 @@ class AccentTrainer(BaseTrain):
                 verbose=self.config.callbacks.checkpoint_verbose,
             )
         )
-
-        # if hasattr(self.config.api, "telegram"):
-        #     from bot.dl_bot import DLBot
-        #     from bot.telegram_bot_callback import TelegramBotCallback
-        #
-        #     # Create a DLBot instance
-        #     user_id = None if not self.config.api.telegram.user_id else self.config.api.telegram.user_id
-        #     bot = DLBot(token=self.config.api.telegram.token,
-        #                 user_id=user_id)
-        #     # Create a TelegramBotCallback instance
-        #     self.callbacks.append(TelegramBotCallback(bot))
-        #
-        # # # Creates log file for graphical interpretation using TensorBoard
-        # tb = TensorBoard(log_dir='../logs', histogram_freq=0, batch_size=32, write_graph=True, write_grads=True,
-        #                  write_images=True, embeddings_freq=0, embeddings_layer_names=None,
-        #                  embeddings_metadata=None)
 
         # log experiments to comet.ml
         if hasattr(self.config.api, "comet"):
