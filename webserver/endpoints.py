@@ -1,30 +1,20 @@
 import datetime
 import os
-
-from keras.preprocessing.image import img_to_array, ImageDataGenerator
-from keras.applications import imagenet_utils
-from PIL import Image
-import numpy as np
 import flask
-import io
 
 # initialize our Flask application and the Keras model
 from werkzeug.utils import secure_filename
 
-from data_loader.sound_utils import SoundUtils
-from web.loader import predict_class_audio, ModelLoader
+from utils.sound import SoundUtils
+from webserver.loader import predict_class_audio
 
 app = flask.Flask(__name__)
-
-
-def load_model():
-    loader = ModelLoader("model1.h5")
-    return loader.load_model()
+app.config['UPLOAD_FOLDER'] = "../webserver/uploads"
 
 
 @app.route("/", methods=["GET"])
 def index():
-    return "Welcome to the PyImageSearch Keras REST API!"
+    return "Welcome to the AccentTrainer Keras REST API!"
 
 
 def save_file(request):
@@ -40,7 +30,7 @@ def save_file(request):
     if file:
         filename = now + '_' + file.filename
         filename = secure_filename(filename)
-        full_path = os.path.join("../web/uploads", filename)
+        full_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
         file.save(full_path)
         file_uploaded = True
 
@@ -63,10 +53,8 @@ def predict():
 
             # read the sound file
             status, sound_file = save_file(flask.request)
-            model = load_model()
-            # sound_file = os.path.join("../web/uploads", sound_file)
             mfcc = SoundUtils.segment_request_file(sound_file)
-            prediction = predict_class_audio(mfcc, model)
+            prediction = predict_class_audio(mfcc)
 
             data["predictions"] = str(prediction)
 
@@ -81,6 +69,5 @@ def predict():
 # then start the server
 if __name__ == "__main__":
     print(("* Loading Keras model and Flask starting server..."
-        "please wait until server has fully started"))
-    app.config['UPLOAD_FOLDER'] = "web/uploads"
+           "please wait until server has fully started"))
     app.run()

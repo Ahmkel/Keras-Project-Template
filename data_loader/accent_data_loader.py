@@ -8,7 +8,7 @@ from joblib import Parallel, delayed
 from base.base_data_loader import BaseDataLoader
 
 from data_loader.csv_parser import split_people, to_categorical
-from data_loader.sound_utils import SoundUtils, process_sound_file
+from utils.sound import SoundUtils, process_sound_file
 from tqdm import tqdm
 
 
