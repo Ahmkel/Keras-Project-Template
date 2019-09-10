@@ -5,12 +5,7 @@ import numpy as np
 from keras.engine.saving import load_model
 
 
-def get_model_path(folder, name):
-    return os.path.join(folder, name)
-
-
-def load_local_model(model_name, folder_path="../saved_models/"):
-    model_path = get_model_path(folder_path, model_name)
+def load_local_model(model_path):
     model = load_model(model_path)
     return model
 
@@ -28,7 +23,15 @@ def predict_class_audio(MFCCs):
     return Counter(list(y_predicted)).most_common(1)[0][0]
 
 
+EXP_TYPE = "usa_english_speakers"
+# EXP_NUM = "4089305544804f5689faf7cce3e84258"
+EXP_NUM = "d2225d2dd7af486cb08ea10bc127bf09"
+
 # load once for the application
-model = load_local_model("model1.h5")
+model_path = os.path.join("../saved_models",
+                          EXP_TYPE, EXP_NUM, "model.h5")
+
+model = load_local_model(model_path)
+
 # BUG fix - initializing the modle with an empty vector
 model.predict(np.zeros((1, 13, 30, 1)))

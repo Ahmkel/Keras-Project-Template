@@ -9,13 +9,14 @@
   "model":{
     "name": "accent_model.AccentModel",
     "learning_rate": 0.001,
-    "optimizer": "adadelta",
+    "optimizer": "adam",
+    "loss": "categorical_crossentropy",
     "input_shape": [13, 30, 1],
     "num_classes": 2
   },
   "trainer":{
     "name": "accent_trainer.AccentTrainer",
-    "num_epochs": 20,
+    "num_epochs": 100,
     "batch_size": 128,
     "validation_split":0.25,
     "verbose_training": true
