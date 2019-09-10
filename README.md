@@ -178,7 +178,7 @@ Create a command line tool for Keras project scaffolding where the user defines 
 Any contributions are welcome including improving the template and example projects.
 
 # Acknowledgements
-This project template is based on [MrGemy95](https://github.com/MrGemy95)'s [Tensorflow Project Template](https://github.com/MrGemy95/Tensorflow-Project-Template).
+This project template is based on [Ahmkel](https://github.com/Ahmkel)'s [Keras Project Template](https://github.com/Ahmkel/Keras-Project-Template).
 
+The model and implementation is inspired by [yatharthgarg](https://github.com/yatharthgarg)'s [Speech-Accent-Recognition](https://github.com/yatharthgarg/Speech-Accent-Recognition).
 
-Thanks for my colleagues [Mahmoud Khaled](https://github.com/MahmoudKhaledAli), [Ahmed Waleed](https://github.com/Rombux) and [Ahmed El-Gammal](https://github.com/AGammal) who worked on the initial project that spawned this template.

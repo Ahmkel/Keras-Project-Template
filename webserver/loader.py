@@ -33,5 +33,5 @@ model_path = os.path.join("../saved_models",
 
 model = load_local_model(model_path)
 
-# BUG fix - initializing the modle with an empty vector
+# BUG fix - initializing the model with an empty vector
 model.predict(np.zeros((1, 13, 30, 1)))
