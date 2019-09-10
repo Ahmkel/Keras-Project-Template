@@ -25,7 +25,7 @@ def predict_class_audio(MFCCs):
 
 # The current served model based on the experiment type
 EXP_TYPE = "usa_english_speakers"
-EXP_NUM = "d2225d2dd7af486cb08ea10bc127bf09"
+EXP_NUM = "ba71cbd87cf240d0a9f4e9584982366d"
 
 # load once for the application
 model_path = os.path.join("../saved_models",
