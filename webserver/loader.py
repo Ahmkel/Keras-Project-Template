@@ -32,6 +32,5 @@ model_path = os.path.join("../saved_models",
                           EXP_TYPE, EXP_NUM, "model.h5")
 
 model = load_local_model(model_path)
-
 # BUG fix - initializing the model with an empty vector
 model.predict(np.zeros((1, 13, 30, 1)))
