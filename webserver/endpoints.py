@@ -83,14 +83,18 @@ def bot():
             return "missing path"
         print(data)
 
-        file_path = download_file(data["path"])
+        try:
+            file_path = download_file(data["path"])
 
-        prediction = get_prediction(file_path)
+            prediction = get_prediction(file_path)
 
-        # indicate that the request was a success
-        response["success"] = True
-        response["predictions"] = prediction
-        print(response)
+            # indicate that the request was a success
+            response["success"] = True
+            response["predictions"] = prediction
+            print(response)
+
+        except Exception as e:
+            return flask.jsonify({"error": e})
 
     return flask.jsonify(response)
 

@@ -69,13 +69,13 @@ class AudioDownloader:
         return len(audio_urls)
 
 
-if __name__ == '__main__':
-    '''
-    Example console command
-    python GetAudio.py audio_metadata.csv
-    '''
-    csv_file = sys.argv[1]
-    ga = AudioDownloader(csv_filepath=csv_file,
-                         debug=True)
-    ga.get_audio()
+# if __name__ == '__main__':
+#     '''
+#     Example console command
+#     python GetAudio.py audio_metadata.csv
+#     '''
+#     csv_file = sys.argv[1]
+#     ga = AudioDownloader(csv_filepath=csv_file,
+#                          debug=True)
+#     ga.get_audio()
 

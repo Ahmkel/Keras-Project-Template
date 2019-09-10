@@ -1,7 +1,12 @@
-DEFAULT_LANGUAGES = ["english",
+DEFAULT_LANGUAGES = [
+                     "hebrew",
+                     "english",
                      "russian",
                      "arabic",
                      "french",
                      "spanish",
                      "amharic",
-                     "hebrew"]
+                     "german",
+                     "italian",
+                     "greek"
+                     ]

@@ -7,6 +7,7 @@ import sys
 import re
 
 from data_loader.accent_data_loader import AccentDataLoader
+from data_scraping.audio_downloader import AudioDownloader
 from data_scraping.constants import DEFAULT_LANGUAGES
 
 ROOT_URL = 'http://accent.gmu.edu/'
@@ -160,19 +161,8 @@ def scrape(destination_file,
     # dont download, read data from an input file to filter
     if input_file:
         df = pd.read_csv(input_file)
-
     else:
-        # Check if destination file exists, else create a new one
-        try:
-            df = pd.read_csv(output_file)
-            if download:
-                df = df.append(create_dataframe(languages=languages), ignore_index=True)
-        except:
-            if download:
-                df = create_dataframe(languages=languages)
-            else:
-                print("Couldn't read input csv file")
-                sys.exit(0)
+        df = create_dataframe(languages=languages)
 
     df.drop_duplicates(subset='language_num', inplace=True)
 
@@ -180,19 +170,19 @@ def scrape(destination_file,
     df.loc[(df.native_language != "english"), 'new_native_language'] = "other"
     df.loc[(df.native_language == "english"), 'new_native_language'] = "english"
 
+    # if we want only us natives, we drop all english speakers born in different places
     if only_usa:
         df.drop(df[(df.native_language == "english") & (df.birth_place != "usa")].index, inplace=True)
     else:
         # we convert all the non USA people to "other"
         df.loc[(df.native_language == "english") & (df.birth_place != "usa"), 'new_native_language'] = "other"
 
-    # remove other language
-    df.drop(df[(df.native_language == "russian")].index, inplace=True)
-    df.drop(df[(df.native_language == "amharic")].index, inplace=True)
-    df.drop(df[(df.native_language == "hebrew")].index, inplace=True)
-
-
     # Filter metadata to retrieve only files desired
     df.drop(df[(df.length_of_english_residence > 10) & (df.native_language != "english")].index, inplace=True)
 
     df.to_csv(output_file, index=False)
+
+    if download:
+        downloader = AudioDownloader(csv_filepath=output_file,
+                                     debug=True)
+        downloader.get_audio()

@@ -13,9 +13,9 @@ def dataset_with_only_usa_natives(input_file="", download=True):
            input_file=input_file)
 
 
-def dataset_with_all_english_speakers(input_file="",
+def dataset_with_all_english_speakers(languages,
+                                      input_file="",
                                       download=True):
-    languages = DEFAULT_LANGUAGES
     scrape(destination_file="all_english_speakers.csv",
            languages=languages,
            download=download,
@@ -23,11 +23,12 @@ def dataset_with_all_english_speakers(input_file="",
 
 
 if __name__ == '__main__':
-    # download once all names
-    dataset_with_all_english_speakers(input_file="../" + AccentDataLoader.csv_path("all_speakers.csv"),
-                                      )
-    # dataset_with_all_english_speakers(download=True,)
 
-    # dataset_with_only_usa_natives(input_file="../" + AccentDataLoader.csv_path("all_speakers.csv"),
-    #                               download=False)
+    # Creates a CSV files with all the links to sound files in the
+    dataset_with_all_english_speakers(download=True,
+                                      languages=DEFAULT_LANGUAGES)
+    dataset_with_only_usa_natives(input_file="../" + AccentDataLoader.csv_path("all_english_speakers.csv"))
+    # dataset_with_all_english_speakers(languages=DEFAULT_LANGUAGES,
+    #                                   input_file="../" + AccentDataLoader.csv_path("all_speakers.csv"),
+
 
