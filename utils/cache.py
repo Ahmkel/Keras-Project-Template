@@ -32,3 +32,4 @@ def np_cache(func):
         return value
 
     return cached
+

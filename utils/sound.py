@@ -1,5 +1,3 @@
-import io
-
 import librosa
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler
@@ -10,8 +8,6 @@ SILENCE_THRESHOLD = .01
 RATE = 24000
 N_MFCC = 13
 COL_SIZE = 30
-EPOCHS = 10  # 35#250
-
 
 
 def get_wav(file_path):

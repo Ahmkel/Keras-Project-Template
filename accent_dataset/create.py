@@ -1,6 +1,6 @@
 from data_loader.accent_data_loader import AccentDataLoader
-from data_scraping.constants import DEFAULT_LANGUAGES
-from data_scraping.fromwebsite import scrape
+from accent_dataset.constants import DEFAULT_LANGUAGES
+from accent_dataset.web_scraping import scrape
 
 
 def dataset_with_only_usa_natives(input_file="", download=True):

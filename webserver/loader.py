@@ -23,8 +23,8 @@ def predict_class_audio(MFCCs):
     return Counter(list(y_predicted)).most_common(1)[0][0]
 
 
+# The current served model based on the experiment type
 EXP_TYPE = "usa_english_speakers"
-# EXP_NUM = "4089305544804f5689faf7cce3e84258"
 EXP_NUM = "d2225d2dd7af486cb08ea10bc127bf09"
 
 # load once for the application

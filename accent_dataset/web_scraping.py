@@ -3,12 +3,10 @@ import requests
 import pandas as pd
 from bs4 import BeautifulSoup
 import time
-import sys
 import re
 
 from data_loader.accent_data_loader import AccentDataLoader
-from data_scraping.audio_downloader import AudioDownloader
-from data_scraping.constants import DEFAULT_LANGUAGES
+from accent_dataset.audio_downloader import AudioDownloader
 
 ROOT_URL = 'http://accent.gmu.edu/'
 BROWSE_LANGUAGE_URL = 'browse_language.php?function=find&language={}'
