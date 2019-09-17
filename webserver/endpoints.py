@@ -8,12 +8,13 @@ import flask
 from werkzeug.utils import secure_filename
 
 from utils.sound import SoundUtils
+from utils.utils import get_root
 from webserver.loader import predict_class_audio
-from os import path
 from pydub import AudioSegment
 
 app = flask.Flask(__name__)
-app.config['UPLOAD_FOLDER'] = "../webserver/uploads"
+app.config['UPLOAD_FOLDER'] = os.path.join(get_root(), "webserver/uploads")
+
 
 def convert_mp3(current_file):
     # files
@@ -24,6 +25,7 @@ def convert_mp3(current_file):
     sound.export(dst, format="wav")
 
     return dst
+
 
 @app.route("/", methods=["GET"])
 def index():
@@ -65,6 +67,7 @@ def download_file(file_path_url):
     save_path = os.path.join(app.config['UPLOAD_FOLDER'], name)
     current_file = urllib.request.urlretrieve(file_path_url, save_path)
     return save_path
+
 
 def get_prediction(sound_file):
     mfcc = SoundUtils.segment_request_file(sound_file)

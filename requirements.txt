@@ -3,8 +3,10 @@ keras
 pandas
 sklearn
 pydub
+tensorflow
 BeautifulSoup4
 librosa
 dotmap
 comet-ml
+flask
 waitress

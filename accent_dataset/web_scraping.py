@@ -154,7 +154,7 @@ def scrape(destination_file,
            download=True,
            input_file=""):
 
-    output_file = "../" + AccentDataLoader.csv_path(destination_file)
+    output_file = AccentDataLoader.csv_path(destination_file)
 
     # dont download, read data from an input file to filter
     if input_file:

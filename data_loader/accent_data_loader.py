@@ -11,6 +11,8 @@ from data_loader.csv_parser import split_people, to_categorical
 from utils.sound import SoundUtils, process_sound_file
 from tqdm import tqdm
 
+from utils.utils import get_root
+
 
 class AccentDataLoader(BaseDataLoader):
 
@@ -23,7 +25,8 @@ class AccentDataLoader(BaseDataLoader):
     @staticmethod
     def csv_path(file_name):
 
-        return os.path.join(AccentDataLoader.DATASET_DIR,
+        return os.path.join(get_root(),
+                            AccentDataLoader.DATASET_DIR,
                             AccentDataLoader.TRAINING_FILES_DIR,
                             file_name)
 

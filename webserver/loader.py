@@ -4,7 +4,7 @@ from collections import Counter
 import numpy as np
 from keras.engine.saving import load_model
 
-from utils.utils import from_env
+from utils.utils import from_env, get_project_root, get_root
 
 
 def load_local_model(model_path):
@@ -31,9 +31,11 @@ MODEL_TYPE = from_env('MODEL_TYPE', 'usa_english_speakers')
 MODEL_NUM = from_env('MODEL_NUM', "ba71cbd87cf240d0a9f4e9584982366d")
 
 # load once for the application
-model_path = os.path.join("../saved_models",
+model_path = os.path.join(get_root(),
+                          "saved_models",
                           MODEL_TYPE, MODEL_NUM, "model.h5")
-
+print("HERERR")
+print(model_path)
 model = load_local_model(model_path)
 # BUG fix - initializing the model with an empty vector
 model.predict(np.zeros((1, 13, 30, 1)))
