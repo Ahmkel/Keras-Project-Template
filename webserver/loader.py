@@ -4,6 +4,8 @@ from collections import Counter
 import numpy as np
 from keras.engine.saving import load_model
 
+from utils.utils import from_env
+
 
 def load_local_model(model_path):
     model = load_model(model_path)
@@ -24,12 +26,13 @@ def predict_class_audio(MFCCs):
 
 
 # The current served model based on the experiment type
-EXP_TYPE = "usa_english_speakers"
-EXP_NUM = "ba71cbd87cf240d0a9f4e9584982366d"
+
+MODEL_TYPE = from_env('MODEL_TYPE', 'usa_english_speakers')
+MODEL_NUM = from_env('MODEL_NUM', "ba71cbd87cf240d0a9f4e9584982366d")
 
 # load once for the application
 model_path = os.path.join("../saved_models",
-                          EXP_TYPE, EXP_NUM, "model.h5")
+                          MODEL_TYPE, MODEL_NUM, "model.h5")
 
 model = load_local_model(model_path)
 # BUG fix - initializing the model with an empty vector
