@@ -63,8 +63,6 @@ class AccentTrainer(BaseTrain):
 
     def train(self):
 
-        print(self.config.toDict())
-
         # Image shifting
         # used to augement in the input data
         datagen = ImageDataGenerator(width_shift_range=0.05)
