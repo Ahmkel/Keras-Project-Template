@@ -30,18 +30,18 @@ if __name__ == '__main__':
     # Creates a CSV file with the given languages and
     # download the relevant audio files
     ################################################
-    # dataset_with_all_english_speakers(download=True,
-    #                                   languages=DEFAULT_LANGUAGES)
-    # dataset_with_only_usa_natives(input_file=AccentDataLoader.csv_path("all_english_speakers.csv"))
+    dataset_with_all_english_speakers(download=True,
+                                      languages=DEFAULT_LANGUAGES)
+    dataset_with_only_usa_natives(input_file=AccentDataLoader.csv_path("all_english_speakers.csv"))
 
     ################################################
     # Uncomment if the sound CSV is already present
     # and you want only to download the audio file
     ################################################
 
-    dataset_with_all_english_speakers(download=True,
-                                      languages=DEFAULT_LANGUAGES,
-                                      input_file=AccentDataLoader.csv_path("all_english_speakers.csv"))
+    # dataset_with_all_english_speakers(download=True,
+    #                                   languages=DEFAULT_LANGUAGES,
+    #                                   input_file=AccentDataLoader.csv_path("all_english_speakers.csv"))
 
 
 

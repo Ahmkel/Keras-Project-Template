@@ -1,73 +1,34 @@
-﻿# Keras Project Template [![CometML](https://img.shields.io/badge/comet.ml-track-brightgreen.svg)](https://www.comet.ml)
+﻿# Keras Accent Trainer [![CometML](https://img.shields.io/badge/comet.ml-track-brightgreen.svg)](https://www.comet.ml)
 
-A project template to simplify building and training deep learning models using Keras.
+### About
+Every individual has their own dialects or mannerisms in which they speak. This project revolves around the detection of backgrounds of every individual using their speeches. The goal in this project is to classify various types of accents, specifically foreign accents, by the native language of the speaker. This project allows to detect the demographic and linguistic backgrounds of the speakers by comparing different speech outputs with the speech accent archive dataset in order to determine which variables are key predictors of each accent. The speech accent archive demonstrates that accents are systematic rather than merely mistaken speech. Given a recording of a speaker speaking a known script of English words, this project predicts the speaker’s native language.
 
-# Table of contents
+### Dataset
+All of the speech files used for this project come from the Speech Accent Archive, a repository of spoken English hosted by George Mason University. Over 2000 speakers representing over 100 native languages read a common elicitation paragraph in English:
 
-- [Getting Started](#getting-started)
-- [Running The Demo Project](#running-the-demo-project)
-- [Comet.ml Integration](#cometml-integration)
-- [Template Details](#template-details)
-    - [Project Architecture](#project-architecture)
-    - [Folder Structure](#folder-structure)
-    - [Main Components](#main-components)
-- [Future Work](#future-work)
-- [Example Projects](#example-projects)
-- [Contributing](#contributing)
-- [Acknowledgements](#acknowledgements)
-
-# Getting Started
-This template allows you to simply build and train deep learning models with checkpoints and tensorboard visualization.
-
-In order to use the template you have to:
-1. Define a data loader class.
-2. Define a model class that inherits from BaseModel.
-3. Define a trainer class that inherits.
-4. Define a configuration file with the parameters needed in an experiment.
-5. Run the model using:
-```shell
-python main.py -c [path to configuration file]
 ```
+'Please call Stella. Ask her to bring these things with her from the store: Six spoons of fresh
+snow peas, five thick slabs of blue cheese, and maybe a snack for her brother Bob. We also need 
+a small plastic snake and a big toy frog for the kids. She can scoop these things into three red 
+bags, and we will go meet her Wednesday at the train station.'
+```
+
+The common nature of the dataset makes it ideal for studying accent, being that the wording is provided, and the recording quality is (nearly) uniform across all speakers. Since the dataset was large in the terms of size (approximately 2GB) but the samples were less, so I worked mainly on 3 most spoken accents i.e. English, Mandarin and Arabic.
+
+The dataset contained **.mp3** audio files which were converted to **.wav** audio files which allowed easy extraction of the **MFCC (Mel Frequency Cepstral Coefficients)** features to build a 2-D convolution neural network.
+
+The MFCC was fed into a 2-Dimensional Convolutional Neural Network (CNN) to predict the native language class.
 
 # Running The Demo Project
-A simple model for the mnist dataset is available to test the template.
-To run the demo project:
-1. Start the training using:
-```shell
-python main.py -c configs/simple_mnist_config.json
-```
-2. Start Tensorboard visualization using:
-```shell
-tensorboard --logdir=experiments/simple_mnist/logs
-```
-
-<div align="center">
-
-<img align="center" width="600" src="https://github.com/Ahmkel/Keras-Project-Template/blob/master/figures/Tensorboard_demo.PNG?raw=true">
-
-</div>
 
 # Comet.ml Integration
-This template also supports reporting to Comet.ml which allows you to see all your hyper-params, metrics, graphs, dependencies and more including real-time metric.
+We added integration to Comet.ml which allows you to see all your hyper-params, metrics, graphs, dependencies and more including real-time metric.
 
-Add your API key [in the configuration file](configs/simple_mnist_config.json#L15):
+Add your API key [in the configuration file](configs/all_english_speakers.json#L15):
 
+For example:  `"{"api": {"comet": {"api_key": "your key here"}}}`
 
-For example:  `"comet_api_key": "your key here"`
-
-Here's how it looks after you start training:
-<div align="center">
-
-<img align="center" width="800" src="https://comet-ml.nyc3.digitaloceanspaces.com/CometDemo.gif">
-
-</div>
-
-You can also link your Github repository to your comet.ml project for full version control.
-
-
-# Template Details
-
-## Project Architecture
+# Project Architecture
 
 <div align="center">
 
@@ -75,110 +36,35 @@ You can also link your Github repository to your comet.ml project for full versi
 
 </div>
 
+# Training configurations
+- **all_english_speakers.json**
+  - The training set contains all speaksers, where USA natives are in one class and all others are matched to the other class as foreign speakers
+- **usa_english_speakers.json** 
+  - The training set contains only USA natives as one class, without any other english speakers.
 
-## Folder Structure
+# Dockerized environment
 
-```
-├── main.py             - here's an example of main that is responsible for the whole pipeline.
-│
-│
-├── base                - this folder contains the abstract classes of the project components
-│   ├── base_data_loader.py   - this file contains the abstract class of the data loader.
-│   ├── base_model.py   - this file contains the abstract class of the model.
-│   └── base_train.py   - this file contains the abstract class of the trainer.
-│
-│
-├── model               - this folder contains the models of your project.
-│   └── simple_mnist_model.py
-│
-│
-├── trainer             - this folder contains the trainers of your project.
-│   └── simple_mnist_trainer.py
-│
-|
-├── data_loader         - this folder contains the data loaders of your project.
-│   └── simple_mnist_data_loader.py
-│
-│
-├── configs             - this folder contains the experiment and model configs of your project.
-│   └── simple_mnist_config.json
-│
-│
-├── datasets            - this folder might contain the datasets of your project.
-│
-│
-└── utils               - this folder contains any utils you need.
-     ├── config.py      - util functions for parsing the config files.
-     ├── dirs.py        - util functions for creating directories.
-     └── utils.py       - util functions for parsing arguments.
-```
+Use [keras-accent-deployment](https://github.com/guyeshet/accent_training_deployment) for the fully dockerized version
 
+# Local Installation
 
-## Main Components
+1. First we need to download locally the accent audio files
+   ```
+   pip install -r requirements.txt
+   ```
 
-### Models
-You need to:
-1. Create a model class that inherits from **BaseModel**.
-2. Override the ***build_model*** function which defines your model.
-3. Call ***build_model*** function from the constructor.
+# Project Execution
 
-
-### Trainers
-You need to:
-1. Create a trainer class that inherits from **BaseTrainer**.
-2. Override the ***train*** function which defines the training logic.
-
-**Note:** To add functionalities after each training epoch such as saving checkpoints or logs for tensorboard using Keras callbacks:
-1. Declare a callbacks array in your constructor.
-2. Define an ***init_callbacks*** function to populate your callbacks array and call it in your constructor.
-3. Pass the callbacks array to the ***fit*** function on the model object.
-
-**Note:** You can use ***fit_generator*** instead of ***fit*** to support generating new batches of data instead of loading the whole dataset at one time.
-
-### Data Loaders
-You need to:
-1. Create a data loader class that inherits from **BaseDataLoader**.
-2. Override the ***get_train_data()*** and the ***get_test_data()*** functions to return your train and test dataset splits.
-
-**Note:** You can also define a different logic where the data loader class has a function ***get_next_batch*** if you want the data reader to read batches from your dataset each time.
-
-### Configs
-You need to define a .json file that contains your experiment and model configurations such as the experiment name, the batch size, and the number of epochs.
-
-
-### Main
-Responsible for building the pipeline.
-1. Parse the config file
-2. Create an instance of your data loader class.
-3. Create an instance of your model class.
-4. Create an instance of your trainer class.
-5. Train your model using ".Train()" function on the trainer object.
-
-### From Config
-We can now load models without having to explicitly create an instance of each class. Look at:
-1. from_config.py: this can load any config file set up to point to the right modules/classes to import
-2. Look at configs/simple_mnist_from_config.json to get an idea of how this works from the config. Run it with:
-```shell
-python from_config.py -c configs/simple_mnist_from_config.json
-```
-3. See conv_mnist_from_config.json (and the additional data_loader/model) to see how easy it is to run a different experiment with just a different config file:
-```shell
-python from_config.py -c configs/conv_mnist_from_config.json
-```
-
-# Example Projects
-* [Toxic comments classification using Convolutional Neural Networks and Word Embedding](https://github.com/Ahmkel/Toxic-Comments-Competition-Kaggle)
-
-
-# Future Work
-Create a command line tool for Keras project scaffolding where the user defines a data loader, a model, a trainer and runs the tool to generate the whole project. (This is somewhat complete now by loading each of these from the config)
-
-
-# Contributing
-Any contributions are welcome including improving the template and example projects.
+1. First we need to download locally the accent audio files. Its a long operation that downloads over 1000 audio files
+   ```
+   python accent_dataset/create.py
+   ```
+2. Train the model by the requested configuration: 
+   ```
+   python train_from_config.py -c configs/usa_english_speakers.json
+   ```
 
 # Acknowledgements
 This project template is based on [Ahmkel](https://github.com/Ahmkel)'s [Keras Project Template](https://github.com/Ahmkel/Keras-Project-Template).
 
 The model and implementation is inspired by [yatharthgarg](https://github.com/yatharthgarg)'s [Speech-Accent-Recognition](https://github.com/yatharthgarg/Speech-Accent-Recognition).
-
