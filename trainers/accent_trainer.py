@@ -53,6 +53,7 @@ class AccentTrainer(BaseTrain):
 
         # log experiments to comet.ml
         if hasattr(self.config.api, "comet"):
+            print(self.config.toDict())
             from comet_ml import Experiment
             experiment = Experiment(api_key=self.config.api.comet.api_key,
                                     project_name=self.config.api.comet.exp_name)
