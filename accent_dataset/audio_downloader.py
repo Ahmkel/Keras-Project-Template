@@ -12,7 +12,7 @@ from utils.utils import get_root
 
 class AudioDownloader:
 
-    def __init__(self, csv_filepath, destination_folder=None, wait=1.5, debug=False):
+    def __init__(self, csv_filepath, destination_folder="", wait=1.5, debug=False):
         '''
         Initializes GetAudio class object
         :param destination_folder (str): Folder where audio files will be saved
