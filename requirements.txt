@@ -10,3 +10,4 @@ dotmap
 comet-ml
 flask
 waitress
+tqdm
