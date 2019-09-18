@@ -7,10 +7,12 @@ import os
 import multiprocessing as mp
 from pydub import AudioSegment
 
+from utils.utils import get_root
+
 
 class AudioDownloader:
 
-    def __init__(self, csv_filepath, destination_folder='../datasets/audio/', wait=1.5, debug=False):
+    def __init__(self, csv_filepath, destination_folder=None, wait=1.5, debug=False):
         '''
         Initializes GetAudio class object
         :param destination_folder (str): Folder where audio files will be saved
@@ -20,7 +22,10 @@ class AudioDownloader:
         self.csv_filepath = csv_filepath
         self.audio_df = pd.read_csv(csv_filepath)
         self.url = 'http://chnm.gmu.edu/accent/soundtracks/{}.mp3'
-        self.destination_folder = destination_folder
+        if not destination_folder:
+            self.destination_folder = os.path.join(get_root(), "datasets", "audio")
+        else:
+            self.destination_folder = destination_folder
         self.wait = wait
         self.debug = debug
 
@@ -32,12 +37,14 @@ class AudioDownloader:
 
     def download(self, url, output_file):
 
+        # create the output file path
+        sound_file_path = os.path.join(self.destination_folder, "{}.wav".format(output_file))
+
         if self.debug:
-            print('downloading {}'.format(output_file))
+            print('downloading {} to {}'.format(output_file, sound_file_path))
         (filename, headers) = urllib.request.urlretrieve(url)
         sound = AudioSegment.from_mp3(filename)
 
-        sound_file_path = os.path.join(self.destination_folder, "{}.wav".format(output_file))
         sound.export(sound_file_path, format="wav")
 
     def get_audio(self):
