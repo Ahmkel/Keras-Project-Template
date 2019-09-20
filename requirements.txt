@@ -1,9 +1,9 @@
 numpy
-keras=2.2.4
+keras==2.2.4
 pandas
 sklearn
 pydub
-tensorflow=1.13.1
+tensorflow==1.13.1
 BeautifulSoup4
 librosa
 dotmap
