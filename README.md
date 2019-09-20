@@ -57,7 +57,8 @@ Use [keras_accent_deployment](https://github.com/guyeshet/accent_training_deploy
    ```
    python accent_dataset/create.py
    ```
-2. Train the model by the requested configuration: 
+2. Train the model by the requested configuration. At first it's a long process, as we need to convert the wav
+   files into MFCC. The MFCCs are cached so future trainings are faster: 
    ```
    python train_from_config.py -c configs/usa_english_speakers.json
    ```
