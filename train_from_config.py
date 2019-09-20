@@ -1,7 +1,4 @@
-import os
-
 from comet_ml import Experiment
-
 from utils.config import process_config
 from utils.dirs import create_dirs
 from utils.args import get_args

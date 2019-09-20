@@ -8,6 +8,9 @@ from base.base_trainer import BaseTrain
 import os
 from keras.callbacks import ModelCheckpoint, EarlyStopping, TensorBoard
 
+from utils.dirs import verify_folder
+from utils.utils import get_root
+
 
 class AccentTrainer(BaseTrain):
 
@@ -57,7 +60,7 @@ class AccentTrainer(BaseTrain):
             experiment = Experiment(api_key=self.config.api.comet.api_key,
                                     project_name=self.config.api.comet.exp_name)
             experiment.disable_mp()
-            experiment.log_parameters(self.config)
+            experiment.log_parameters(self.config.toDict())
             self.experiment_id = experiment.id
             self.callbacks.append(experiment.get_callback('keras'))
 
@@ -84,9 +87,9 @@ class AccentTrainer(BaseTrain):
         )
 
         self.loss.extend(history.history['loss'])
-        self.acc.extend(history.history['acc'])
+        # self.acc.extend(history.history['acc'])
         self.val_loss.extend(history.history['val_loss'])
-        self.val_acc.extend(history.history['val_acc'])
+        # self.val_acc.extend(history.history['val_acc'])
 
     def save_model(self):
 
@@ -94,9 +97,11 @@ class AccentTrainer(BaseTrain):
             import datetime
             self.experiment_id = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 
-        model_type_path = os.path.join("saved_models", self.config.exp.name, self.experiment_id)
+        model_type_path = os.path.join(get_root(),
+                                       "saved_models",
+                                       self.config.exp.name, self.experiment_id)
 
-        pathlib.Path(model_type_path).mkdir(parents=True, exist_ok=True)
+        verify_folder(model_type_path)
 
         name = "model.h5"
         model_path = os.path.join(model_type_path, name)
@@ -105,13 +110,14 @@ class AccentTrainer(BaseTrain):
         self.copy_context()
 
     def copy_context(self):
-        model_type_path = os.path.join("saved_models", self.config.exp.name, self.experiment_id)
-
-        pathlib.Path(model_type_path).mkdir(parents=True, exist_ok=True)
+        model_type_path = os.path.join(get_root(),
+                                       "saved_models",
+                                       self.config.exp.name, self.experiment_id)
+        verify_folder(model_type_path)
 
         # copying CSV file
         csv_name = self.config.data_loader.data_file
-        path_from = os.path.join("datasets/training_files", csv_name)
+        path_from = os.path.join(get_root(), "datasets/training_files", csv_name)
         path_to = os.path.join(model_type_path, csv_name)
         shutil.copy(path_from, path_to)
 

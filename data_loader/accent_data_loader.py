@@ -8,6 +8,7 @@ from joblib import Parallel, delayed
 from base.base_data_loader import BaseDataLoader
 
 from data_loader.csv_parser import split_people, to_categorical
+from utils.dirs import verify_folder
 from utils.sound import SoundUtils, process_sound_file
 from tqdm import tqdm
 
@@ -25,9 +26,12 @@ class AccentDataLoader(BaseDataLoader):
     @staticmethod
     def csv_path(file_name):
 
-        return os.path.join(get_root(),
-                            AccentDataLoader.DATASET_DIR,
-                            AccentDataLoader.TRAINING_FILES_DIR,
+        root_folder = os.path.join(get_root(),
+                                   AccentDataLoader.DATASET_DIR,
+                                   AccentDataLoader.TRAINING_FILES_DIR)
+        verify_folder(root_folder)
+
+        return os.path.join(root_folder,
                             file_name)
 
     def _csv_path(self):
