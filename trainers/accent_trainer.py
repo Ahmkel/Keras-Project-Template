@@ -52,15 +52,15 @@ class AccentTrainer(BaseTrain):
         )
 
         # log experiments to comet.ml
-        if hasattr(self.config.api, "comet"):
-            print(self.config.toDict())
-            from comet_ml import Experiment
-            experiment = Experiment(api_key=self.config.api.comet.api_key,
-                                    project_name=self.config.api.comet.exp_name)
-            experiment.disable_mp()
-            experiment.log_parameters(self.config)
-            self.experiment_id = experiment.id
-            self.callbacks.append(experiment.get_callback('keras'))
+        # if hasattr(self.config.api, "comet"):
+        #     print(self.config.toDict())
+        #     from comet_ml import Experiment
+        #     experiment = Experiment(api_key=self.config.api.comet.api_key,
+        #                             project_name=self.config.api.comet.exp_name)
+        #     experiment.disable_mp()
+        #     experiment.log_parameters(self.config)
+        #     self.experiment_id = experiment.id
+        #     self.callbacks.append(experiment.get_callback('keras'))
 
     def train(self):
 
