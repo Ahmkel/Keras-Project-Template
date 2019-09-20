@@ -1,6 +1,6 @@
 DEFAULT_LANGUAGES = [
                      "hebrew",
-                     # "english",
+                     "english",
                      # "russian",
                      # "arabic",
                      # "french",
