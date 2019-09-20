@@ -1,6 +1,5 @@
 import multiprocessing
 import os
-import pathlib
 
 import numpy as np
 import pandas as pd
@@ -9,6 +8,7 @@ from joblib import Parallel, delayed
 from base.base_data_loader import BaseDataLoader
 
 from data_loader.csv_parser import split_people, to_categorical
+from utils.dirs import verify_folder
 from utils.sound import SoundUtils, process_sound_file
 from tqdm import tqdm
 
@@ -29,7 +29,7 @@ class AccentDataLoader(BaseDataLoader):
         root_folder = os.path.join(get_root(),
                                    AccentDataLoader.DATASET_DIR,
                                    AccentDataLoader.TRAINING_FILES_DIR)
-        pathlib.Path(root_folder).mkdir(parents=True, exist_ok=True)
+        verify_folder(root_folder)
 
         return os.path.join(root_folder,
                             file_name)
