@@ -8,6 +8,8 @@ from base.base_trainer import BaseTrain
 import os
 from keras.callbacks import ModelCheckpoint, EarlyStopping, TensorBoard
 
+from utils.utils import get_root
+
 
 class AccentTrainer(BaseTrain):
 
@@ -95,7 +97,9 @@ class AccentTrainer(BaseTrain):
             import datetime
             self.experiment_id = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 
-        model_type_path = os.path.join("saved_models", self.config.exp.name, self.experiment_id)
+        model_type_path = os.path.join(get_root(),
+                                       "saved_models",
+                                       self.config.exp.name, self.experiment_id)
 
         pathlib.Path(model_type_path).mkdir(parents=True, exist_ok=True)
 
@@ -106,7 +110,9 @@ class AccentTrainer(BaseTrain):
         self.copy_context()
 
     def copy_context(self):
-        model_type_path = os.path.join("saved_models", self.config.exp.name, self.experiment_id)
+        model_type_path = os.path.join(get_root(),
+                                       "saved_models",
+                                       self.config.exp.name, self.experiment_id)
 
         pathlib.Path(model_type_path).mkdir(parents=True, exist_ok=True)
 
