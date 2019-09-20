@@ -1,5 +1,6 @@
 import multiprocessing
 import os
+import pathlib
 
 import numpy as np
 import pandas as pd
@@ -25,9 +26,12 @@ class AccentDataLoader(BaseDataLoader):
     @staticmethod
     def csv_path(file_name):
 
-        return os.path.join(get_root(),
-                            AccentDataLoader.DATASET_DIR,
-                            AccentDataLoader.TRAINING_FILES_DIR,
+        root_folder = os.path.join(get_root(),
+                                   AccentDataLoader.DATASET_DIR,
+                                   AccentDataLoader.TRAINING_FILES_DIR)
+        pathlib.Path(root_folder).mkdir(parents=True, exist_ok=True)
+
+        return os.path.join(root_folder,
                             file_name)
 
     def _csv_path(self):
