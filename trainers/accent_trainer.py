@@ -75,22 +75,22 @@ class AccentTrainer(BaseTrain):
         steps_per_epoch = len(self.training_data[0]) / self.config.trainer.batch_size
 
         # using a generator to load the data
-        history = self.model.fit_generator(
-            datagen.flow(self.training_data[0], self.training_data[1],
-                         batch_size=self.config.trainer.batch_size),
-            # self.training_data,
-            # batch_size=self.config.trainer.batch_size,
-            epochs=self.config.trainer.num_epochs,
-            steps_per_epoch=steps_per_epoch,
-            verbose=self.config.trainer.verbose_training,
-            validation_data=(self.validation_data[0], self.validation_data[1]),
-            callbacks=self.callbacks,
-        )
+        # history = self.model.fit_generator(
+        #     datagen.flow(self.training_data[0], self.training_data[1],
+        #                  batch_size=self.config.trainer.batch_size),
+        #     # self.training_data,
+        #     # batch_size=self.config.trainer.batch_size,
+        #     epochs=self.config.trainer.num_epochs,
+        #     steps_per_epoch=steps_per_epoch,
+        #     verbose=self.config.trainer.verbose_training,
+        #     validation_data=(self.validation_data[0], self.validation_data[1]),
+        #     callbacks=self.callbacks,
+        # )
 
-        self.loss.extend(history.history['loss'])
-        self.acc.extend(history.history['acc'])
-        self.val_loss.extend(history.history['val_loss'])
-        self.val_acc.extend(history.history['val_acc'])
+        # self.loss.extend(history.history['loss'])
+        # self.acc.extend(history.history['acc'])
+        # self.val_loss.extend(history.history['val_loss'])
+        # self.val_acc.extend(history.history['val_acc'])
 
     def save_model(self):
 
@@ -98,11 +98,13 @@ class AccentTrainer(BaseTrain):
             import datetime
             self.experiment_id = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 
+        print("EXP ID", self.experiment_id)
         model_type_path = os.path.join(get_root(),
                                        "saved_models",
                                        self.config.exp.name, self.experiment_id)
 
         verify_folder(model_type_path)
+        print("model path", model_type_path)
 
         name = "model.h5"
         model_path = os.path.join(model_type_path, name)
