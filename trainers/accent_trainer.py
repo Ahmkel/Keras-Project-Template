@@ -8,6 +8,7 @@ from base.base_trainer import BaseTrain
 import os
 from keras.callbacks import ModelCheckpoint, EarlyStopping, TensorBoard
 
+from utils.dirs import verify_folder
 from utils.utils import get_root
 
 
@@ -101,7 +102,7 @@ class AccentTrainer(BaseTrain):
                                        "saved_models",
                                        self.config.exp.name, self.experiment_id)
 
-        pathlib.Path(model_type_path).mkdir(parents=True, exist_ok=True)
+        verify_folder(model_type_path)
 
         name = "model.h5"
         model_path = os.path.join(model_type_path, name)
@@ -113,12 +114,11 @@ class AccentTrainer(BaseTrain):
         model_type_path = os.path.join(get_root(),
                                        "saved_models",
                                        self.config.exp.name, self.experiment_id)
-
-        pathlib.Path(model_type_path).mkdir(parents=True, exist_ok=True)
+        verify_folder(model_type_path)
 
         # copying CSV file
         csv_name = self.config.data_loader.data_file
-        path_from = os.path.join("datasets/training_files", csv_name)
+        path_from = os.path.join(get_root(), "datasets/training_files", csv_name)
         path_to = os.path.join(model_type_path, csv_name)
         shutil.copy(path_from, path_to)
 
