@@ -61,7 +61,8 @@ class AudioDownloader:
 
         # Create all the necessary URLs for download
         for lang_num in self.audio_df['language_num']:
-            if not os.path.exists(self.destination_folder + '{}.wav'.format(lang_num)):
+            sound_file = os.path.join(self.destination_folder, '{}.wav'.format(lang_num))
+            if not os.path.exists(sound_file):
                 audio_urls.append(self.url.format(lang_num))
                 file_name.append(lang_num)
 
