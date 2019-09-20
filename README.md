@@ -44,7 +44,7 @@ For example:  `"{"api": {"comet": {"api_key": "your key here"}}}`
 
 # Dockerized environment
 
-Use [keras-accent-deployment](https://github.com/guyeshet/accent_training_deployment) for the fully dockerized version
+Use [keras_accent_deployment](https://github.com/guyeshet/accent_training_deployment) for the fully dockerized environment
 
 # Local Installation
 
