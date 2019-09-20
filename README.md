@@ -13,8 +13,6 @@ a small plastic snake and a big toy frog for the kids. She can scoop these thing
 bags, and we will go meet her Wednesday at the train station.'
 ```
 
-The common nature of the dataset makes it ideal for studying accent, being that the wording is provided, and the recording quality is (nearly) uniform across all speakers. Since the dataset was large in the terms of size (approximately 2GB) but the samples were less, so I worked mainly on 3 most spoken accents i.e. English, Mandarin and Arabic.
-
 The dataset contained **.mp3** audio files which were converted to **.wav** audio files which allowed easy extraction of the **MFCC (Mel Frequency Cepstral Coefficients)** features to build a 2-D convolution neural network.
 
 The MFCC was fed into a 2-Dimensional Convolutional Neural Network (CNN) to predict the native language class.
