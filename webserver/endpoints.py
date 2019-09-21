@@ -7,13 +7,15 @@ import flask
 # initialize our Flask application and the Keras model
 from werkzeug.utils import secure_filename
 
+from utils.dirs import verify_folder
 from utils.sound import SoundUtils
 from utils.utils import get_root
 from webserver.loader import predict_class_audio
 from pydub import AudioSegment
 
 app = flask.Flask(__name__)
-app.config['UPLOAD_FOLDER'] = os.path.join(get_root(), "webserver/uploads")
+app.config['UPLOAD_FOLDER'] = os.path.join(get_root(), "webserver", "uploads")
+verify_folder(app.config['UPLOAD_FOLDER'])
 
 
 def convert_mp3(current_file):
@@ -48,10 +50,6 @@ def save_file(request):
         return file_uploaded, full_path
 
     filename = file.filename
-    # if file.filename.endswith('.mp3'):
-    #     filename = convert_mp3(file.filename)
-    # else:
-    #     filename = file.filename
 
     filename = now + '_' + filename
     filename = secure_filename(filename)

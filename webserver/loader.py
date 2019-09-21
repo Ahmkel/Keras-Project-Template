@@ -28,14 +28,13 @@ def predict_class_audio(MFCCs):
 # The current served model based on the experiment type
 
 MODEL_TYPE = from_env('MODEL_TYPE', 'usa_english_speakers')
-MODEL_NUM = from_env('MODEL_NUM', "ba71cbd87cf240d0a9f4e9584982366d")
+MODEL_NUM = from_env('MODEL_NUM', "cf889d5b43214002a20d65ad750345c4")
 
 # load once for the application
 model_path = os.path.join(get_root(),
                           "saved_models",
                           MODEL_TYPE, MODEL_NUM, "model.h5")
-print("HERERR")
-print(model_path)
+
 model = load_local_model(model_path)
 # BUG fix - initializing the model with an empty vector
 model.predict(np.zeros((1, 13, 30, 1)))
