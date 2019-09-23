@@ -29,9 +29,6 @@ class AccentModel(BaseModel):
 
         self.model.add(Dense(self.config.model.num_classes, activation='softmax'))
 
-        # self.model.compile(loss='categorical_crossentropy',
-        #                    optimizer='adadelta',
-        #                    metrics=['accuracy'])
         self.model.compile(loss=self.config.model.loss,
                            optimizer=self.config.model.optimizer,
                            metrics=['accuracy'])

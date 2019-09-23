@@ -11,3 +11,5 @@ comet-ml
 flask
 waitress
 tqdm
+google-cloud-storage
+oauth2client

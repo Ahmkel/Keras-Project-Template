@@ -9,7 +9,7 @@ import os
 from keras.callbacks import ModelCheckpoint, EarlyStopping, TensorBoard
 
 from utils.dirs import verify_folder
-from utils.utils import get_root
+from utils.utils import get_root, upload_blob
 
 
 class AccentTrainer(BaseTrain):
@@ -109,6 +109,9 @@ class AccentTrainer(BaseTrain):
 
         self.copy_context()
 
+        self.cloud_upload(model_type_path,
+                          self.config.exp.name, self.experiment_id)
+
     def copy_context(self):
         model_type_path = os.path.join(get_root(),
                                        "saved_models",
@@ -126,3 +129,14 @@ class AccentTrainer(BaseTrain):
         path_to = os.path.join(model_type_path, "config.json")
         with open(path_to, "w") as f:
             f.write(json_config)
+
+    def cloud_upload(self, model_type_path, exp_name, exp_id):
+
+        for subdir, dirs, files in os.walk(model_type_path):
+            for file in files:
+                # print os.path.join(subdir, file)
+                filepath = subdir + os.sep + file
+
+                dest_name = "/".join((exp_name, exp_id, file))
+                upload_blob(source_file_name=filepath,
+                            destination_blob_name=dest_name)

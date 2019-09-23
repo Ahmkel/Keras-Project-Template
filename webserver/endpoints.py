@@ -70,7 +70,6 @@ def download_file(file_path_url):
 def get_prediction(sound_file):
     mfcc = SoundUtils.segment_request_file(sound_file)
     prediction = predict_class_audio(mfcc)
-
     return str(prediction)
 
 

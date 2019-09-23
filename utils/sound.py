@@ -1,5 +1,6 @@
 import librosa
 import numpy as np
+from pydub import AudioSegment
 from sklearn.preprocessing import MinMaxScaler
 
 from utils.cache import np_cache
@@ -48,12 +49,41 @@ class SoundUtils:
 
     @staticmethod
     def segment_request_file(request_file):
+        SoundUtils.trim_file(request_file)
         y, sr = librosa.load(request_file)
         wav = librosa.core.resample(y=y, orig_sr=sr, target_sr=RATE, scale=True)
+        # wav = SoundUtils.remove_silence(wav)
         mfcc = to_mfcc(wav)
         segments = SoundUtils.segment_one(mfcc)
 
         return segments
+
+    def detect_leading_silence(sound, silence_threshold=-50.0, chunk_size=10):
+        '''
+        sound is a pydub.AudioSegment
+        silence_threshold in dB
+        chunk_size in ms
+
+        iterate over chunks until you find the first one with sound
+        '''
+        trim_ms = 0  # ms
+
+        assert chunk_size > 0  # to avoid infinite loop
+        while sound[trim_ms:trim_ms + chunk_size].dBFS < silence_threshold and trim_ms < len(sound):
+            trim_ms += chunk_size
+
+        return trim_ms
+
+    @staticmethod
+    def trim_file(file_path, out=None):
+        sound = AudioSegment.from_file(file_path, format="wav")
+
+        start_trim = SoundUtils.detect_leading_silence(sound)
+        end_trim = SoundUtils.detect_leading_silence(sound.reverse())
+        duration = len(sound)
+        trimmed_sound = sound[start_trim:duration - end_trim]
+        output_path = file_path if not out else out
+        trimmed_sound.export(output_path, format="wav")
 
     @staticmethod
     def remove_silence(wav, thresh=0.04, chunk=5000):
@@ -64,7 +94,7 @@ class SoundUtils:
         '''
 
         tf_list = []
-        for x in range(len(wav) / chunk):
+        for x in range(int(len(wav) / chunk)):
             if (np.any(wav[chunk * x:chunk * (x + 1)] >= thresh) or np.any(wav[chunk * x:chunk * (x + 1)] <= -thresh)):
                 tf_list.extend([True] * chunk)
             else:
@@ -72,6 +102,16 @@ class SoundUtils:
 
         tf_list.extend((len(wav) - len(tf_list)) * [False])
         return (wav[tf_list])
+
+    # @staticmethod
+    # def detect_leading_silence(sound, silence_threshold=-50.0, chunk_size=10):
+    #     trim_ms = 0  # ms
+    #
+    #     assert chunk_size > 0  # to avoid infinite loop
+    #     while sound[trim_ms:trim_ms + chunk_size].dBFS < silence_threshold and trim_ms < len(sound):
+    #         trim_ms += chunk_size
+    #
+    #     return trim_ms
 
     @staticmethod
     def normalize_mfcc(mfcc):

@@ -1,5 +1,4 @@
 import pathlib
-import sys
 
 import pandas as pd
 import urllib.request
