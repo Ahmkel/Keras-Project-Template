@@ -4,13 +4,12 @@ from collections import Counter
 import numpy as np
 from keras.engine.saving import load_model
 
-from utils.dirs import verify_folder
-from utils.utils import from_env, get_project_root, get_root, get_blob
+from utils.utils import from_env, get_root, get_blob
 
+model = None
 
 def load_model_from_cloud(model_path):
     blob_path = get_blob(model_path)
-    # verify_folder(blob_path)
     return load_model(blob_path)
 
 
@@ -30,9 +29,11 @@ def predict_class_audio(MFCCs):
     y_predicted = model.predict_classes(MFCCs, verbose=0)
     return Counter(list(y_predicted)).most_common(1)[0][0]
 
+
 def load(from_cloud=True):
     # The current served model based on the experiment type
 
+    global model
     MODEL_TYPE = from_env('MODEL_TYPE', 'all_english_speakers')
     MODEL_NUM = from_env('MODEL_NUM', "d6fb4d1597eb437cabd308274c911a3a")
 
