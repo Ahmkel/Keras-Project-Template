@@ -5,6 +5,8 @@ from pathlib import Path
 from google.cloud import storage
 from oauth2client.service_account import ServiceAccountCredentials
 
+from utils.dirs import verify_folder
+
 
 def get_project_root() -> Path:
     """Returns project root folder."""
@@ -47,6 +49,28 @@ def upload_blob(source_file_name, destination_blob_name, bucket_name="accent-mod
         source_file_name,
         destination_blob_name))
 
-# with open('creds.json') as f:
-#     print("here")
-# upload_blob("../requirements.txt", "test/te/requirements.txt")
+
+def parent_folder(file_path):
+    return os.path.dirname(file_path)
+
+
+def get_blob(file_name,  bucket_name="accent-models"):
+    storage_client = storage.Client.from_service_account_json(os.path.join(get_root(),
+                                                                           'creds.json'))
+    bucket = storage_client.get_bucket(bucket_name)
+    # blob_path = "/".join((bucket_name, file_name))
+    blob_path = file_name
+    blob = bucket.blob(blob_path)
+    if not blob.exists():
+        print("blob doesnt exist", blob_path)
+        return ""
+
+    out_path = os.path.join(get_root(),
+                            "saved_models",
+                            file_name)
+
+    verify_folder(parent_folder(out_path))
+    blob.download_to_filename(out_path)
+
+    return out_path
+

@@ -4,12 +4,18 @@ from collections import Counter
 import numpy as np
 from keras.engine.saving import load_model
 
-from utils.utils import from_env, get_project_root, get_root
+from utils.dirs import verify_folder
+from utils.utils import from_env, get_project_root, get_root, get_blob
+
+
+def load_model_from_cloud(model_path):
+    blob_path = get_blob(model_path)
+    # verify_folder(blob_path)
+    return load_model(blob_path)
 
 
 def load_local_model(model_path):
-    model = load_model(model_path)
-    return model
+    return load_model(os.path.join(get_root(), model_path))
 
 
 def predict_class_audio(MFCCs):
@@ -24,18 +30,20 @@ def predict_class_audio(MFCCs):
     y_predicted = model.predict_classes(MFCCs, verbose=0)
     return Counter(list(y_predicted)).most_common(1)[0][0]
 
-def load():
+def load(from_cloud=True):
     # The current served model based on the experiment type
 
-    MODEL_TYPE = from_env('MODEL_TYPE', 'usa_english_speakers')
-    MODEL_NUM = from_env('MODEL_NUM', "6644421e82134e51a7376365f0097a41")
+    MODEL_TYPE = from_env('MODEL_TYPE', 'all_english_speakers')
+    MODEL_NUM = from_env('MODEL_NUM', "d6fb4d1597eb437cabd308274c911a3a")
 
     # load once for the application
-    model_path = os.path.join(get_root(),
-                              "saved_models",
-                              MODEL_TYPE, MODEL_NUM, "model.h5")
+    model_path = "/".join((MODEL_TYPE, MODEL_NUM, "model.h5"))
 
-    model = load_local_model(model_path)
+    if not from_cloud:
+        model = load_local_model(model_path)
+    else:
+        model = load_model_from_cloud(model_path)
+
     # BUG fix - initializing the model with an empty vector
     model.predict(np.zeros((1, 13, 30, 1)))
 
