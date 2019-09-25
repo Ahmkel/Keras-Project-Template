@@ -1,3 +1,6 @@
+import os
+import subprocess
+
 import librosa
 import numpy as np
 from pydub import AudioSegment
@@ -75,7 +78,37 @@ class SoundUtils:
         return trim_ms
 
     @staticmethod
+    def get_ext(filename):
+        return os.path.splitext(filename)[1]
+
+    @staticmethod
+    def set_ext(filename, ext):
+        return os.path.splitext(filename)[0] + '.' + ext
+
+    @staticmethod
+    def needs_conversion(file_path):
+        # every none wav file needs a conversion
+        return SoundUtils.get_ext(file_path) != ".wav"
+
+    @staticmethod
+    def convert(file_path, convert_to_ext="wav"):
+        new_path = SoundUtils.set_ext(file_path, ext=convert_to_ext)
+        subprocess.run(['ffmpeg', '-i', file_path, new_path])
+        return new_path
+
+    @staticmethod
     def trim_file(file_path, out=None):
+
+        # checks if the file needs to be converted first
+        if SoundUtils.needs_conversion(file_path):
+            file_path = SoundUtils.convert(file_path)
+
+        # in case we require a conversion from oga to wav for trimming
+        if SoundUtils.get_ext(file_path) == ".oga":
+            new_path = SoundUtils.set_ext(file_path, ext="wav")
+            subprocess.run(['ffmpeg', '-i', file_path, new_path])
+            file_path = new_path
+
         sound = AudioSegment.from_file(file_path, format="wav")
 
         start_trim = SoundUtils.detect_leading_silence(sound)
