@@ -1,5 +1,3 @@
-from pathlib import Path
-
 import requests
 import pandas as pd
 from bs4 import BeautifulSoup
@@ -151,7 +149,8 @@ def create_dataframe(languages):
 
 def scrape(destination_file,
            languages,
-           only_usa=False,
+           target_accent,
+           only_target=False,
            download=True,
            input_file=""):
 
@@ -169,12 +168,12 @@ def scrape(destination_file,
     df.loc[(df.native_language != "english"), 'new_native_language'] = "other"
     df.loc[(df.native_language == "english"), 'new_native_language'] = "english"
 
-    # if we want only us natives, we drop all english speakers born in different places
-    if only_usa:
-        df.drop(df[(df.native_language == "english") & (df.birth_place != "usa")].index, inplace=True)
+    # if we want only people of the target accent, we drop all english speakers born in different places
+    if only_target:
+        df.drop(df[(df.native_language == "english") & (df.birth_place != target_accent)].index, inplace=True)
     else:
-        # we convert all the non USA people to "other"
-        df.loc[(df.native_language == "english") & (df.birth_place != "usa"), 'new_native_language'] = "other"
+        # we convert all the non target accent people to "other"
+        df.loc[(df.native_language == "english") & (df.birth_place != target_accent), 'new_native_language'] = "other"
 
     # Filter metadata to retrieve only files desired
     df.drop(df[(df.length_of_english_residence > 10) & (df.native_language != "english")].index, inplace=True)

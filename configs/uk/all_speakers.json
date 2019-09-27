@@ -1,22 +1,22 @@
 {
   "exp": {
-    "name": "usa_english_speakers"
+    "name": "uk_target_all_english_speakers"
   },
   "data_loader": {
     "name": "accent_data_loader.AccentDataLoader",
-    "data_file": "usa_english_speakers.csv"
+    "data_file": "uk_target_all_english_speakers.csv"
   },
   "model":{
     "name": "accent_model.AccentModel",
     "learning_rate": 0.001,
-    "optimizer": "adam",
     "loss": "categorical_crossentropy",
+    "optimizer": "adam",
     "input_shape": [13, 30, 1],
     "num_classes": 2
   },
   "trainer":{
     "name": "accent_trainer.AccentTrainer",
-    "num_epochs": 50,
+    "num_epochs": 1,
     "batch_size": 128,
     "validation_split":0.25,
     "verbose_training": true
@@ -41,3 +41,4 @@
   },
   "debug": "true"
 }
+
