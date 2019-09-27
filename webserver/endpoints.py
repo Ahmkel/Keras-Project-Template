@@ -117,6 +117,8 @@ def predict():
 
             # indicate that the request was a success
             response["success"] = True
+        else:
+            response["error"] = "missing file key: 'file'"
 
     # return the data dictionary as a JSON response
     return flask.jsonify(response)
