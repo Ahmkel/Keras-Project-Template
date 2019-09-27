@@ -1,0 +1,44 @@
+{
+  "exp": {
+    "name": "usa_target_all_english_speakers"
+  },
+  "data_loader": {
+    "name": "accent_data_loader.AccentDataLoader",
+    "data_file": "usa_target_all_english_speakers.csv"
+  },
+  "model":{
+    "name": "accent_model.AccentModel",
+    "learning_rate": 0.001,
+    "loss": "categorical_crossentropy",
+    "optimizer": "adam",
+    "input_shape": [13, 30, 1],
+    "num_classes": 2
+  },
+  "trainer":{
+    "name": "accent_trainer.AccentTrainer",
+    "num_epochs": 1,
+    "batch_size": 128,
+    "validation_split":0.25,
+    "verbose_training": true
+  },
+  "callbacks":{
+    "checkpoint_monitor": "val_loss",
+    "checkpoint_mode": "min",
+    "checkpoint_save_best_only": true,
+    "checkpoint_save_weights_only": true,
+    "checkpoint_verbose": true,
+    "tensorboard_write_graph": true
+  },
+  "api": {
+    "comet": {
+      "api_key": "BrsiReJnVrJjMuJAnLxd0x2n0",
+      "exp_name": "accent-training"
+    },
+    "telegram": {
+      "token": "839888724:AAG59E81mmbvJy_Jy8je1DyusR14yU8U43E",
+      "user_id": ""
+    }
+  },
+  "debug": "true"
+}
+

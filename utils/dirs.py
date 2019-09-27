@@ -1,4 +1,9 @@
 import os
+import pathlib
+
+
+def verify_folder(root_folder):
+    pathlib.Path(root_folder).mkdir(parents=True, exist_ok=True)
 
 
 def create_dirs(dirs):

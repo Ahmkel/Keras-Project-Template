@@ -1,0 +1,15 @@
+numpy
+keras==2.2.4
+pandas
+sklearn
+pydub
+tensorflow==1.13.1
+BeautifulSoup4
+librosa
+dotmap
+comet-ml
+flask
+waitress
+tqdm
+google-cloud-storage
+oauth2client

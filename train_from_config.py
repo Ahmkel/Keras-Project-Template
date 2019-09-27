@@ -1,3 +1,4 @@
+from comet_ml import Experiment
 from utils.config import process_config
 from utils.dirs import create_dirs
 from utils.args import get_args
@@ -17,18 +18,27 @@ def main():
         print('Create the data generator.')
         data_loader = factory.create("data_loader."+config.data_loader.name)(config)
 
+        # generator = data_loader.get_train_generator()
+        # generator.__getitem__(0)
         print('Create the model.')
         model = factory.create("models."+config.model.name)(config)
 
         print('Create the trainer')
-        trainer = factory.create("trainers."+config.trainer.name)(model.model, data_loader.get_train_data(), config)
+        trainer = factory.create("trainers."+config.trainer.name)(model.model,
+                                                                  data_loader.get_train_data(),
+                                                                  data_loader.get_validation_data(),
+                                                                  config)
 
         print('Start training the model.')
         trainer.train()
 
+        trainer.save_model()
+
+
     except Exception as e:
         print(e)
         sys.exit(1)
+
 
 if __name__ == '__main__':
     main()
