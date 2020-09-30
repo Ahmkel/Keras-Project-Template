@@ -175,7 +175,7 @@ Create a command line tool for Keras project scaffolding where the user defines 
 
 
 # Contributing
-Any contributions are welcome including improving the template and example projects.
+Any contribution is welcome including improving the template and example projects.
 
 # Acknowledgements
 This project template is based on [MrGemy95](https://github.com/MrGemy95)'s [Tensorflow Project Template](https://github.com/MrGemy95/Tensorflow-Project-Template).
