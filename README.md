@@ -29,6 +29,21 @@ In order to use the template you have to:
 python main.py -c [path to configuration file]
 ```
 
+# Instaling Dependencies
+Supposing your have already Python3 and Pip installed.
+1. In your shell create a virtual environments: 
+```shell
+python -m venv /path/to/env
+```
+2. Activate your new environments:
+```shell
+source /path/to/env/bin/activate
+```
+3. Install Dependencies:
+```shell
+pip install -r requirements.txt
+```
+
 # Running The Demo Project
 A simple model for the mnist dataset is available to test the template.
 To run the demo project:
