@@ -29,7 +29,7 @@ In order to use the template you have to:
 python main.py -c [path to configuration file]
 ```
 
-# Instaling Dependencies
+# Installing Dependencies
 Supposing your have already Python3 and Pip installed.
 1. In your shell create a virtual environments: 
 ```shell
